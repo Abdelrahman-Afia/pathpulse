@@ -5,6 +5,7 @@ import Navbar from "../Components/Navbar";
 import Hero from "../Components/Hero";
 import SectionTwo from "../Components/SectionTwo";
 import SectionThree from "../Components/SectionThree";
+import SectionFour from "../Components/SectionFour";
 
 export default function Home() {
   const [language, setLanguage] = useState("en");
@@ -21,6 +22,7 @@ export default function Home() {
         <Hero language={language} />
         <SectionTwo language={language} />
         <SectionThree language={language} />
+        <SectionFour language={language} />
       </main>
     </div>
   );

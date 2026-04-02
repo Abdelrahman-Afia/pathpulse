@@ -1,0 +1,130 @@
+.sectionFour {
+  background: #ffffff;
+  padding: 42px 22px 80px;
+  font-family:
+    "Cairo",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+}
+
+.sectionFourInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 28px;
+}
+
+.sectionFourContent {
+  color: #004e98;
+}
+
+.sectionFourTitle {
+  margin: 0 0 18px;
+  font-size: clamp(30px, 4vw, 56px);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.sectionFourText {
+  margin: 0;
+  font-size: clamp(18px, 1.7vw, 30px);
+  line-height: 1.5;
+  font-weight: 600;
+  max-width: 720px;
+}
+
+.sectionFourBtn {
+  margin-top: 28px;
+  padding: 1.15em 2.6em;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 650;
+  color: #004e98;
+  background-color: #ffffff;
+  font-family: "Cairo", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.sectionFourBtn:hover {
+  background-color: #004e98;
+  box-shadow: 0px 15px 20px rgba(0, 78, 152, 0.28);
+  color: #ffffff;
+  transform: translateY(-7px);
+}
+
+.sectionFourBtn:active {
+  transform: translateY(-1px);
+}
+
+.sectionFourBtn:focus-visible {
+  box-shadow:
+    0px 8px 15px rgba(0, 0, 0, 0.1),
+    0 0 0 3px rgba(0, 78, 152, 0.25);
+}
+
+.sectionFourImageWrap {
+  box-sizing: border-box;
+  border-radius: 32px;
+  overflow: hidden;
+  height: 100%;
+  min-height: 100%;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid #ffffff;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition: all 0.5s;
+  user-select: none;
+}
+
+.sectionFourImageWrap:hover {
+  border: 1px solid #004e98;
+  transform: scale(1.05);
+}
+
+.sectionFourImageWrap:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.sectionFourImage {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .sectionFour {
+    padding: 30px 14px 56px;
+  }
+
+  .sectionFourInner {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 20px;
+  }
+
+  .sectionFourImageWrap {
+    min-height: 320px;
+  }
+
+  .sectionFourBtn {
+    font-size: 12px;
+    padding: 1.05em 2.3em;
+    letter-spacing: 2.2px;
+  }
+}
