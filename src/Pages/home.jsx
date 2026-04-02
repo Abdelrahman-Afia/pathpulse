@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "../Assets/Vector.svg";
 import "./home.css";
 import Navbar from "../Components/Navbar";
+import Hero from "../Components/Hero";
 
 export default function Home() {
   const [language, setLanguage] = useState("en");
@@ -13,7 +14,10 @@ export default function Home() {
         onLanguageChange={setLanguage}
         logoSrc={logo}
       />
-      <main className="homeMain" aria-label="Page content" />
+
+      <main className="homeMain" aria-label="Page content">
+        <Hero language={language} />
+      </main>
     </div>
   );
 }
