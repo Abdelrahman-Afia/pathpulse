@@ -4,6 +4,7 @@ import "./home.css";
 import Navbar from "../Components/Navbar";
 import Hero from "../Components/Hero";
 import SectionTwo from "../Components/SectionTwo";
+import SectionThree from "../Components/SectionThree";
 
 export default function Home() {
   const [language, setLanguage] = useState("en");
@@ -19,6 +20,7 @@ export default function Home() {
       <main className="homeMain" aria-label="Page content">
         <Hero language={language} />
         <SectionTwo language={language} />
+        <SectionThree language={language} />
       </main>
     </div>
   );
