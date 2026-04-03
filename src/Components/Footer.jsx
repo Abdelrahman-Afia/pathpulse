@@ -65,9 +65,9 @@ const discoverKeys = [
 ];
 
 const buildLinks = [
-  { key: "about", en: "About us", ar: "من نحن" },
-  { key: "careers", en: "Careers", ar: "الوظائف" },
-  { key: "blog", en: "Blog", ar: "المدونة" },
+  { key: "about", en: "About us", ar: "من نحن", path: "/about" },
+  { key: "careers", en: "Careers", ar: "الوظائف", href: "/" },
+  { key: "blog", en: "Blog", ar: "المدونة", href: "/" },
 ];
 
 const socialLinks = [
@@ -141,9 +141,15 @@ export default function Footer({ language, logoSrc }) {
             <ul className="footerList">
               {buildLinks.map((item) => (
                 <li key={item.key}>
-                  <a className="footerLink" href="/">
-                    {isArabic ? item.ar : item.en}
-                  </a>
+                  {item.path ? (
+                    <Link className="footerLink" to={item.path}>
+                      {isArabic ? item.ar : item.en}
+                    </Link>
+                  ) : (
+                    <a className="footerLink" href={item.href || "/"}>
+                      {isArabic ? item.ar : item.en}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

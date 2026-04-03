@@ -13,6 +13,7 @@ import FutureRadar from "./Pages/FutureRadar";
 import EduMatch from "./Pages/EduMatch";
 import NotFound from "./Pages/NotFound";
 import TermsOfService from "./Pages/TermsOfService";
+import AboutUs from "./Pages/AboutUs";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 
@@ -32,6 +33,7 @@ function App() {
             <Route path="/futureradar" element={<FutureRadar />} />
             <Route path="/edumatch" element={<EduMatch />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/about" element={<AboutUs />} />
             <Route path="*" element={<NotFound />} />
           </Route>
           <Route path="/sign-in" element={<SignIn />} />
