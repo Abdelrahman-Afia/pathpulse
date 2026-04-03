@@ -1,0 +1,171 @@
+.pathfinderResults {
+  text-align: center;
+}
+
+.pathfinderResultsTitle {
+  margin: 0 0 12px;
+  font-size: clamp(22px, 3vw, 34px);
+  line-height: 1.15;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #004e98;
+}
+
+.pathfinderResultsScore {
+  margin: 0 0 20px;
+  font-size: clamp(56px, 12vw, 112px);
+  line-height: 1;
+  font-weight: 800;
+  color: #004e98;
+}
+
+.pathfinderResultsSummary {
+  margin: 0 auto 48px;
+  max-width: 560px;
+  font-size: clamp(16px, 1.6vw, 20px);
+  font-weight: 600;
+  line-height: 1.45;
+  color: #004e98;
+}
+
+.pathfinderResultsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto 48px;
+}
+
+/* Same motion language as .pathfinderQCard */
+.pathfinderResultCard {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  min-height: 140px;
+  padding: 22px 18px;
+  background: #ffffff;
+  border: 1px solid #004e98;
+  border-radius: 28px;
+  text-align: center;
+  transition: all 0.5s;
+  user-select: none;
+}
+
+.pathfinderResultCard:hover {
+  border: 1px solid #004e98;
+  transform: scale(1.05);
+}
+
+.pathfinderResultCard:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.pathfinderResultLabel {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #004e98;
+  opacity: 0.9;
+}
+
+.pathfinderResultValue {
+  margin: 0;
+  font-size: clamp(15px, 1.35vw, 18px);
+  font-weight: 800;
+  line-height: 1.35;
+  color: #004e98;
+}
+
+.pathfinderResultsActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.pathfinderResultsCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  background: #004e98;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.pathfinderResultsCta:hover {
+  opacity: 0.92;
+  transform: scale(1.02);
+}
+
+.pathfinderResultsCta:active {
+  transform: scale(0.98);
+}
+
+.pathfinderResultsCta:focus-visible {
+  outline: 2px solid #004e98;
+  outline-offset: 3px;
+}
+
+.pathfinderResultsRetake {
+  font-size: 16px;
+  font-weight: 700;
+  color: #004e98;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+}
+
+.pathfinderResultsRetake:hover {
+  opacity: 0.85;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pathfinderResultCard,
+  .pathfinderResultsCta {
+    transition: none;
+  }
+
+  .pathfinderResultCard:hover,
+  .pathfinderResultCard:active,
+  .pathfinderResultsCta:hover,
+  .pathfinderResultsCta:active {
+    transform: none;
+  }
+}
+
+.pathfinderResultsRetake:focus-visible {
+  outline: 2px solid #004e98;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .pathfinderResultsGrid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
+  .pathfinderResultCard {
+    min-height: 0;
+  }
+}

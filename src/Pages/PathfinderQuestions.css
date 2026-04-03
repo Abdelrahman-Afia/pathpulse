@@ -1,0 +1,178 @@
+.pathfinderQuestionsTop {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.pathfinderBackNav {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 20px;
+  padding: 8px 0;
+  font-size: 16px;
+  font-weight: 800;
+  color: #004e98;
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.pathfinderBackNav:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.pathfinderBackNavIcon {
+  display: inline-block;
+  line-height: 1;
+}
+
+.pathfinderQStack {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Same motion language as .pathfinderCard */
+.pathfinderQCard {
+  box-sizing: border-box;
+  position: relative;
+  padding: 28px 26px 30px;
+  background: #ffffff;
+  border: 1px solid #004e98;
+  border-radius: 28px;
+  transition: all 0.5s;
+  user-select: none;
+}
+
+.pathfinderQCard:hover {
+  border: 1px solid #004e98;
+  transform: scale(1.05);
+}
+
+.pathfinderQCard:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.pathfinderQTitle {
+  margin: 0 0 22px;
+  font-size: clamp(17px, 1.5vw, 20px);
+  font-weight: 800;
+  line-height: 1.35;
+  color: #004e98;
+  text-align: center;
+}
+
+.pathfinderQGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.pathfinderQOpt {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 16px 14px;
+  font-family: inherit;
+  font-size: clamp(14px, 1.2vw, 16px);
+  font-weight: 700;
+  color: #004e98;
+  background: #ffffff;
+  border: 1px solid #004e98;
+  border-radius: 999px;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.35s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.pathfinderQOpt:hover {
+  transform: scale(1.03);
+}
+
+.pathfinderQOpt:active {
+  transform: scale(0.97);
+}
+
+.pathfinderQOpt--selected {
+  background: rgba(0, 78, 152, 0.08);
+  border-color: #004e98;
+  box-shadow: 0 0 0 1px #004e98 inset;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pathfinderQCard,
+  .pathfinderQOpt,
+  .pathfinderSubmitBtn {
+    transition: none;
+  }
+
+  .pathfinderQCard:hover,
+  .pathfinderQCard:active,
+  .pathfinderQOpt:hover,
+  .pathfinderQOpt:active,
+  .pathfinderSubmitBtn:hover:not(:disabled),
+  .pathfinderSubmitBtn:active:not(:disabled) {
+    transform: none;
+  }
+}
+
+.pathfinderSubmitRow {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 720px;
+  margin: 36px auto 0;
+  padding-top: 8px;
+}
+
+.pathfinderSubmitBtn {
+  padding: 14px 32px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #004e98;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.pathfinderSubmitBtn:hover:not(:disabled) {
+  opacity: 0.92;
+  transform: scale(1.02);
+}
+
+.pathfinderSubmitBtn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.pathfinderSubmitBtn:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+}
+
+.pathfinderSubmitBtn:focus-visible {
+  outline: 2px solid #004e98;
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .pathfinderQGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .pathfinderQCard {
+    padding: 22px 18px 24px;
+  }
+
+  .pathfinderSubmitRow {
+    margin-top: 28px;
+  }
+}

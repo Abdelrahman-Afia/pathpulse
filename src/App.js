@@ -1,7 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { AuthProvider } from "./context/AuthContext";
+import MainLayout from "./Components/MainLayout";
 import Home from "./Pages/home";
+import Pathfinder from "./Pages/Pathfinder";
+import PathfinderQuestions from "./Pages/PathfinderQuestions";
+import PathfinderResults from "./Pages/PathfinderResults";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 
@@ -10,7 +14,12 @@ function App() {
     <BrowserRouter>
       <AuthProvider>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/pathfinder" element={<Pathfinder />} />
+            <Route path="/pathfinder/questions" element={<PathfinderQuestions />} />
+            <Route path="/pathfinder/results" element={<PathfinderResults />} />
+          </Route>
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
         </Routes>

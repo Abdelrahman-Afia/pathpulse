@@ -1,0 +1,172 @@
+.pathfinderPage {
+  background: #ffffff;
+  padding: 32px 22px 80px;
+  font-family:
+    "Cairo",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+  color: #004e98;
+}
+
+.pathfinderInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pathfinderEyebrow {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #004e98;
+}
+
+.pathfinderTitle {
+  margin: 0 0 14px;
+  font-size: clamp(28px, 4.2vw, 46px);
+  line-height: 1.12;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  color: #004e98;
+}
+
+.pathfinderSubtitle {
+  margin: 0 auto 40px;
+  max-width: 520px;
+  font-size: clamp(16px, 1.5vw, 20px);
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  color: #004e98;
+}
+
+.pathfinderGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* Same motion language as .sectionFiveCard */
+a.pathfinderCard {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.pathfinderCard:focus-visible {
+  outline: 2px solid #004e98;
+  outline-offset: 3px;
+}
+
+.pathfinderCard {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 14px;
+  min-height: 220px;
+  padding: 24px 22px;
+  background: #ffffff;
+  border: 1px solid #004e98;
+  border-radius: 28px;
+  cursor: pointer;
+  transition: all 0.5s;
+  user-select: none;
+  text-align: start;
+}
+
+.pathfinderCard:hover {
+  border: 1px solid #004e98;
+  transform: scale(1.05);
+}
+
+.pathfinderCard:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.pathfinderCardIconWrap {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.pathfinderCardIcon {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.pathfinderCardTitle {
+  margin: 0;
+  font-size: clamp(18px, 1.6vw, 22px);
+  font-weight: 800;
+  line-height: 1.25;
+  color: #004e98;
+}
+
+.pathfinderCardSub {
+  margin: 0;
+  font-size: clamp(14px, 1.2vw, 17px);
+  font-weight: 600;
+  line-height: 1.45;
+  color: #004e98;
+  opacity: 0.92;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pathfinderCard {
+    transition: none;
+  }
+
+  .pathfinderCard:hover,
+  .pathfinderCard:active {
+    transform: none;
+  }
+}
+
+.pathfinderBack {
+  margin-top: 36px;
+  text-align: center;
+}
+
+.pathfinderBackLink {
+  color: #004e98;
+  font-weight: 800;
+  font-size: 16px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.pathfinderBackLink:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+  .pathfinderPage {
+    padding: 24px 16px 56px;
+  }
+
+  .pathfinderGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pathfinderCard {
+    min-height: 0;
+  }
+}

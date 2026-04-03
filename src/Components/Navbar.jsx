@@ -88,11 +88,11 @@ export default function Navbar({ language, onLanguageChange, logoSrc }) {
 
   const links = useMemo(
     () => [
-      { key: 'pathfinder', en: 'Pathfinder', ar: 'باث فايندر' },
-      { key: 'focuspal', en: 'FocusPal', ar: 'فوكاس بال' },
-      { key: 'ideafit', en: 'Ideafit', ar: 'ايديا فيت' },
-      { key: 'futureradar', en: 'FutureRadar', ar: 'فيوتشر رادار' },
-      { key: 'edumatch', en: 'EduMatch', ar: 'اديو ماتش' },
+      { key: 'pathfinder', en: 'Pathfinder', ar: 'باث فايندر', path: '/pathfinder' },
+      { key: 'focuspal', en: 'FocusPal', ar: 'فوكاس بال', path: '/' },
+      { key: 'ideafit', en: 'Ideafit', ar: 'ايديا فيت', path: '/' },
+      { key: 'futureradar', en: 'FutureRadar', ar: 'فيوتشر رادار', path: '/' },
+      { key: 'edumatch', en: 'EduMatch', ar: 'اديو ماتش', path: '/' },
     ],
     []
   );
@@ -114,14 +114,14 @@ export default function Navbar({ language, onLanguageChange, logoSrc }) {
 
         <nav className="navbarLinks" aria-label="Primary navigation">
           {links.map((item) => (
-            <a
+            <Link
               key={item.key}
               className="navbarLink"
-              href="/"
+              to={item.path}
               onClick={() => setMobileMenuOpen(false)}
             >
               {isArabic ? item.ar : item.en}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -193,14 +193,14 @@ export default function Navbar({ language, onLanguageChange, logoSrc }) {
       >
         <nav className="navbarMobileLinks" aria-label="Mobile navigation">
           {links.map((item) => (
-            <a
+            <Link
               key={item.key}
               className="navbarMobileLink"
-              href="/"
+              to={item.path}
               onClick={() => setMobileMenuOpen(false)}
             >
               {isArabic ? item.ar : item.en}
-            </a>
+            </Link>
           ))}
         </nav>
 
