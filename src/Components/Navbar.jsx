@@ -91,7 +91,7 @@ export default function Navbar({ language, onLanguageChange, logoSrc }) {
       { key: 'pathfinder', en: 'Pathfinder', ar: 'باث فايندر', path: '/pathfinder' },
       { key: 'focuspal', en: 'FocusPal', ar: 'فوكاس بال', path: '/focuspal' },
       { key: 'ideafit', en: 'Ideafit', ar: 'ايديا فيت', path: '/ideafit' },
-      { key: 'futureradar', en: 'FutureRadar', ar: 'فيوتشر رادار', path: '/' },
+      { key: 'futureradar', en: 'FutureRadar', ar: 'فيوتشر رادار', path: '/futureradar' },
       { key: 'edumatch', en: 'EduMatch', ar: 'اديو ماتش', path: '/' },
     ],
     []
