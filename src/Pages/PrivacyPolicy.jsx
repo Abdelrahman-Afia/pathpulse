@@ -307,12 +307,11 @@ function PrivacyBodyAr() {
 }
 
 export default function PrivacyPolicy() {
-  const { language, isRtl } = useOutletContext();
+  const { language } = useOutletContext();
   const isArabic = language === "ar";
 
   const copy = useMemo(
     () => ({
-      back: isArabic ? "رجوع" : "Back",
       title: isArabic ? "سياسة الخصوصية" : "Privacy Policy",
       updated: isArabic ? "آخر تحديث: ١ أبريل ٢٠٢٦" : "Last updated: April 1, 2026",
     }),
@@ -323,11 +322,6 @@ export default function PrivacyPolicy() {
     <main className="homeMain" aria-label={copy.title}>
       <article className="termsPage" lang={isArabic ? "ar" : "en"}>
         <div className="termsInner">
-          <Link className="termsBack" to="/">
-            <span aria-hidden>{isRtl ? "→" : "←"}</span>
-            {copy.back}
-          </Link>
-
           <div className="termsHero">
             <img className="termsIcon" src={privacyIcon} alt="" width={44} height={44} />
             <h1 className="termsTitle">{copy.title}</h1>

@@ -94,7 +94,7 @@ function defaultState() {
 }
 
 export default function CookieSettings() {
-  const { language, isRtl } = useOutletContext();
+  const { language } = useOutletContext();
   const isArabic = language === "ar";
 
   const [prefs, setPrefs] = useState(defaultState);
@@ -122,7 +122,6 @@ export default function CookieSettings() {
 
   const copy = useMemo(
     () => ({
-      back: isArabic ? "رجوع" : "Back",
       title: isArabic ? "إعدادات ملفات تعريف الارتباط" : "Cookie settings",
       sub: isArabic ? "إدارة تفضيلات ملفات تعريف الارتباط" : "Manage your cookie preferences",
       intro1: isArabic
@@ -166,11 +165,6 @@ export default function CookieSettings() {
     <main className="homeMain" aria-label={isArabic ? "إعدادات ملفات تعريف الارتباط" : "Cookie settings"}>
       <section className="cookiePage">
         <div className="cookieInner">
-          <Link className="cookieBack" to="/">
-            <span aria-hidden>{isRtl ? "→" : "←"}</span>
-            {copy.back}
-          </Link>
-
           <header className="cookiePageHeader">
             <div className="cookiePageIconWrap">
               <img className="cookiePageIcon" src={cookieIcon} alt="" width={48} height={48} />

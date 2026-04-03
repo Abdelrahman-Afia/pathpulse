@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Link, useOutletContext } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 import "./home.css";
 import "./Blog.css";
 import MotionSection from "../Components/MotionSection";
@@ -227,7 +227,6 @@ export default function Blog() {
 
   const copy = useMemo(
     () => ({
-      back: isArabic ? "رجوع" : "Back",
       heroTitle: isArabic ? "مدونة النبض" : "The Pulse blog",
       heroSub: isArabic
         ? "رؤى مهنية، تحديثات المنتج، وقصص نجاح من مجتمع PathPulse."
@@ -261,11 +260,6 @@ export default function Blog() {
     <main className="homeMain" aria-label={isArabic ? "المدونة" : "Blog"}>
       <section className="blogPage">
         <div className="blogInner">
-          <Link className="blogBack" to="/">
-            <span aria-hidden>{isRtl ? "→" : "←"}</span>
-            {copy.back}
-          </Link>
-
           <header className="blogHero">
             <h1 className="blogHeroTitle">{copy.heroTitle}</h1>
             <p className="blogHeroSub">{copy.heroSub}</p>

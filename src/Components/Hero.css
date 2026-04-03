@@ -41,6 +41,9 @@
 }
 
 .heroCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 1.15em 2.6em;
   font-size: 13px;
   text-transform: uppercase;
@@ -56,6 +59,8 @@
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
 .heroCta:hover {

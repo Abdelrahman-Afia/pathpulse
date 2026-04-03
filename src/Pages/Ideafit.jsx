@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useRef, useState } from "react";
-import { Link, useOutletContext } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import "./home.css";
 import "./Ideafit.css";
@@ -207,7 +207,7 @@ function WheelSvg() {
 }
 
 export default function Ideafit() {
-  const { language, isRtl } = useOutletContext();
+  const { language } = useOutletContext();
   const isArabic = language === "ar";
   const reduceMotion = useReducedMotion();
 
@@ -218,7 +218,6 @@ export default function Ideafit() {
 
   const copy = useMemo(
     () => ({
-      back: isArabic ? "رجوع" : "Back",
       eyebrow: isArabic ? "إيديا فيت" : "Ideafit",
       title: isArabic ? "مختبر الابتكار" : "The innovation lab",
       subtitle: isArabic
@@ -337,11 +336,6 @@ export default function Ideafit() {
     <main className="homeMain" aria-label={isArabic ? "إيديا فيت" : "Ideafit"}>
       <section className="ideafitPage">
         <div className="ideafitInner">
-          <Link className="ideafitBackNav" to="/">
-            <span aria-hidden>{isRtl ? "→" : "←"}</span>
-            {copy.back}
-          </Link>
-
           <p className="ideafitEyebrow">{copy.eyebrow}</p>
           <h1 className="ideafitTitle">{copy.title}</h1>
           <p className="ideafitSubtitle">{copy.subtitle}</p>

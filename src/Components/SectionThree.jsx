@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./SectionThree.css";
 import card1 from "../Assets/Card1.png";
 import card2 from "../Assets/Card2.png";
@@ -8,6 +9,7 @@ import card5 from "../Assets/Card5.png";
 const cards = [
   {
     id: "pathfinder",
+    to: "/pathfinder",
     enTag: "Discover",
     arTag: "اكتشف",
     enTitle: "Pathfinder reads your strengths",
@@ -21,6 +23,7 @@ const cards = [
   },
   {
     id: "focuspal",
+    to: "/focuspal",
     enTag: "Monitor",
     arTag: "راقب",
     enTitle: "FocusPal tracks growth",
@@ -33,6 +36,7 @@ const cards = [
   },
   {
     id: "ideafit",
+    to: "/ideafit",
     enTag: "Create",
     arTag: "أنشئ",
     enTitle: "Ideafit builds portfolios",
@@ -45,6 +49,7 @@ const cards = [
   },
   {
     id: "futureradar",
+    to: "/futureradar",
     enTag: "Scan",
     arTag: "حلّل",
     enTitle: "FutureRadar",
@@ -57,6 +62,7 @@ const cards = [
   },
   {
     id: "edumatch",
+    to: "/edumatch",
     enTag: "Match",
     arTag: "طابق",
     enTitle: "EduMatch finds your fit",
@@ -73,7 +79,7 @@ export default function SectionThree({ language }) {
   const isArabic = language === "ar";
 
   return (
-    <section className="sectionThree" aria-label="Explore tools">
+    <section className="sectionThree" id="explore-tools" aria-label="Explore tools">
       <div className="sectionThreeIntro">
         <p className="sectionThreeEyebrow">{isArabic ? "استكشف" : "Explore"}</p>
         <h2 className="sectionThreeTitle">
@@ -87,30 +93,33 @@ export default function SectionThree({ language }) {
       </div>
 
       <div className="sectionThreeGrid">
-        {cards.map((card) => (
-          <article
-            key={card.id}
-            className={`toolCard ${card.large ? "toolCardLarge" : ""}`}
-          >
-            <img className="toolCardImage" src={card.image} alt="" />
-            <div className="toolCardOverlay" />
+        {cards.map((card) => {
+          const title = isArabic ? card.arTitle : card.enTitle;
+          return (
+            <Link
+              key={card.id}
+              className={`toolCard ${card.large ? "toolCardLarge" : ""}`}
+              to={card.to}
+              aria-label={title}
+            >
+              <img className="toolCardImage" src={card.image} alt="" />
+              <div className="toolCardOverlay" aria-hidden />
 
-            <div className="toolCardContent">
-              <p className="toolCardTag">
-                {isArabic ? card.arTag : card.enTag}
-              </p>
-              <h3 className="toolCardTitle">
-                {isArabic ? card.arTitle : card.enTitle}
-              </h3>
-              <p className="toolCardDesc">
-                {isArabic ? card.arDesc : card.enDesc}
-              </p>
-              <button className="toolCardCta" type="button">
-                {isArabic ? card.arCta : card.enCta}
-              </button>
-            </div>
-          </article>
-        ))}
+              <div className="toolCardContent">
+                <p className="toolCardTag">
+                  {isArabic ? card.arTag : card.enTag}
+                </p>
+                <h3 className="toolCardTitle">{title}</h3>
+                <p className="toolCardDesc">
+                  {isArabic ? card.arDesc : card.enDesc}
+                </p>
+                <span className="toolCardCta">
+                  {isArabic ? card.arCta : card.enCta}
+                </span>
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </section>
   );

@@ -129,7 +129,6 @@ export default function Careers() {
 
   const copy = useMemo(
     () => ({
-      back: isArabic ? "رجوع" : "Back",
       heroTitle: isArabic
         ? "ابنوا مستقبل التوجيه المهني"
         : "Build the future of career guidance",
@@ -161,11 +160,6 @@ export default function Careers() {
     <main className="homeMain" aria-label={isArabic ? "الوظائف" : "Careers"}>
       <section className="careersPage">
         <div className="careersInner">
-          <Link className="careersBack" to="/">
-            <span aria-hidden>{isRtl ? "→" : "←"}</span>
-            {copy.back}
-          </Link>
-
           <header className="careersHero">
             <h1 className="careersHeroTitle">{copy.heroTitle}</h1>
             <p className="careersHeroLead">{copy.heroLead}</p>

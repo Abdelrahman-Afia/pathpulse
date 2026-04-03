@@ -115,6 +115,9 @@
 }
 
 .sectionTwoCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Cairo", system-ui, -apple-system, Segoe UI, Roboto, Arial,
     sans-serif;
   height: clamp(48px, 5vw, 60px);
@@ -129,6 +132,8 @@
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
 .sectionTwoCta:hover {

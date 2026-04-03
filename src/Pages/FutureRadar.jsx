@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Link, useOutletContext } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 import "./home.css";
 import "./FutureRadar.css";
 import MotionSection from "../Components/MotionSection";
@@ -229,7 +229,6 @@ export default function FutureRadar() {
 
   const copy = useMemo(
     () => ({
-      back: isArabic ? "رجوع" : "Back",
       eyebrow: isArabic ? "فيوتشر رادار" : "FutureRadar",
       title: isArabic ? "أفق المهارات" : "The skill horizon",
       subtitle: isArabic
@@ -252,11 +251,6 @@ export default function FutureRadar() {
     <main className="homeMain" aria-label={isArabic ? "فيوتشر رادار" : "FutureRadar"}>
       <section className="futureRadarPage">
         <div className="futureRadarInner">
-          <Link className="futureRadarBack" to="/">
-            <span aria-hidden>{isRtl ? "→" : "←"}</span>
-            {copy.back}
-          </Link>
-
           <p className="futureRadarEyebrow">{copy.eyebrow}</p>
           <h1 className="futureRadarTitle">{copy.title}</h1>
           <p className="futureRadarSubtitle">{copy.subtitle}</p>

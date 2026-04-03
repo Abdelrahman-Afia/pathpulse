@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Hero.css";
 import MagicRings from "./MagicRings";
 
@@ -42,9 +43,9 @@ export default function Hero({ language }) {
           <div className="heroContent">
             <h1 className="heroTitle">{heroTitle}</h1>
             <p className="heroSubtitle">{heroSubtitle}</p>
-            <button className="heroCta" type="button">
+            <Link className="heroCta" to="/pathfinder">
               {ctaText}
-            </button>
+            </Link>
           </div>
         </div>
       </div>

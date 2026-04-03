@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./SectionSeven.css";
 import sectionSevenPic from "../Assets/sectionsevenpic.jpg";
 
@@ -17,15 +18,15 @@ export default function SectionSeven({ language }) {
               : "Stop guessing. Start discovering. The pulse is waiting."}
           </p>
           <div className="sectionSevenActions">
-            <a className="navbarStartFree" href="/">
+            <Link className="navbarStartFree" to="/pathfinder">
               <span className="navbarStartFreeText">
                 {isArabic ? "ابدأ" : "Begin"}
               </span>
               <div className="arrow-wrapper" aria-hidden="true">
                 <div className="arrow" />
               </div>
-            </a>
-            <a className="navbarSignIn" href="/">
+            </Link>
+            <a className="navbarSignIn" href="#explore-tools">
               {isArabic ? "استكشف الميزات" : "Explore features"}
             </a>
           </div>

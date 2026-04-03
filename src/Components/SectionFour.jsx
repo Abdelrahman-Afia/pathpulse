@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./SectionFour.css";
 import sectionFourImage from "../Assets/Section4Pic.png";
 
@@ -16,9 +17,9 @@ export default function SectionFour({ language }) {
               ? "انهيار المسارات المهنية التقليدية جعل الكثير من الطلاب يشعرون بالضياع، لكن هذا التحول يحوّل اكتشاف الذات المهني إلى رحلة تمكين بدلًا من عبء. مع التركيز على النمو الشخصي وبناء ملف الأعمال، تقل المسافة بسرعة بين حياتك الأكاديمية الحالية وأهدافك المهنية المستقبلية."
               : "The breakdown of traditional career structures has left many students feeling lost, but this shift is turning professional discovery into an empowering adventure rather than a burden. By focusing on personal growth and portfolio building, the distance between current academic life and future career goals is rapidly shrinking."}
           </p>
-          <button className="sectionFourBtn" type="button">
+          <Link className="sectionFourBtn" to="/pathfinder">
             {isArabic ? "اعثر على نبضك" : "Find Your Pulse"}
-          </button>
+          </Link>
         </div>
 
         <div className="sectionFourImageWrap">

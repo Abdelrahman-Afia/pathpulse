@@ -154,17 +154,17 @@ export default function FocusPal() {
       ],
       cards: [
         {
-          to: "/",
+          to: "/ideafit",
           title: isArabic ? "ابدأ مشروعاً" : "Start a Project",
           sub: isArabic ? "ابنِ محفظتك مع Ideafit" : "Build your portfolio with Ideafit",
         },
         {
-          to: "/",
+          to: "/futureradar",
           title: isArabic ? "اطلع على الاتجاهات" : "Check Trends",
           sub: isArabic ? "شاهد الأكثر طلباً في FutureRadar" : "See what's hot in FutureRadar",
         },
         {
-          to: "/",
+          to: "/edumatch",
           title: isArabic ? "اعثر على برامج" : "Find Programs",
           sub: isArabic ? "طابق المدارس في EduMatch" : "Match with schools in EduMatch",
         },

@@ -53,9 +53,9 @@ export default function SectionTwo({ language }) {
           </div>
 
           <div className="sectionTwoActions">
-            <button className="sectionTwoCta" type="button">
+            <a className="sectionTwoCta" href="#explore-tools">
               {cta}
-            </button>
+            </a>
           </div>
         </div>
       </div>

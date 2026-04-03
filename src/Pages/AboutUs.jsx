@@ -209,7 +209,6 @@ export default function AboutUs() {
 
   const copy = useMemo(
     () => ({
-      back: isArabic ? "رجوع" : "Back",
       kicker: isArabic ? "من نحن" : "About PathPulse",
       heroTitle: isArabic ? "نبني المستقبل" : "We're building the future",
       heroLead: isArabic
@@ -252,11 +251,6 @@ export default function AboutUs() {
     <main className="homeMain" aria-label={isArabic ? "من نحن" : "About us"}>
       <section className="aboutPage">
         <div className="aboutInner">
-          <Link className="aboutBack" to="/">
-            <span aria-hidden>{isRtl ? "→" : "←"}</span>
-            {copy.back}
-          </Link>
-
           <header className="aboutHero">
             <p className="aboutHeroKicker">{copy.kicker}</p>
             <h1 className="aboutHeroTitle">{copy.heroTitle}</h1>

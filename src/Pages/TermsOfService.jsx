@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Link, useOutletContext } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 import "./home.css";
 import "./TermsOfService.css";
 import termsIcon from "../Assets/Terms Of Service Icon.png";
@@ -288,12 +288,11 @@ function TermsBodyAr() {
 }
 
 export default function TermsOfService() {
-  const { language, isRtl } = useOutletContext();
+  const { language } = useOutletContext();
   const isArabic = language === "ar";
 
   const copy = useMemo(
     () => ({
-      back: isArabic ? "رجوع" : "Back",
       title: isArabic ? "شروط الخدمة" : "Terms of Service",
       updated: isArabic ? "آخر تحديث: ١ أبريل ٢٠٢٦" : "Last updated: April 1, 2026",
     }),
@@ -304,11 +303,6 @@ export default function TermsOfService() {
     <main className="homeMain" aria-label={copy.title}>
       <article className="termsPage" lang={isArabic ? "ar" : "en"}>
         <div className="termsInner">
-          <Link className="termsBack" to="/">
-            <span aria-hidden>{isRtl ? "→" : "←"}</span>
-            {copy.back}
-          </Link>
-
           <div className="termsHero">
             <img className="termsIcon" src={termsIcon} alt="" width={44} height={44} />
             <h1 className="termsTitle">{copy.title}</h1>

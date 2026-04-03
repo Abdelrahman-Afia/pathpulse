@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Link, useOutletContext } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 import "./home.css";
 import "./EduMatch.css";
 import MotionSection from "../Components/MotionSection";
@@ -10,6 +10,7 @@ const BUDGET_MAX = 50000;
 const UNIVERSITIES = [
   {
     id: "cairo",
+    website: "https://cu.edu.eg/Home",
     featured: true,
     tuition: 15000,
     matchScore: 95,
@@ -23,6 +24,7 @@ const UNIVERSITIES = [
   },
   {
     id: "auc",
+    website: "https://www.aucegypt.edu/",
     featured: false,
     tuition: 35000,
     matchScore: 88,
@@ -36,6 +38,7 @@ const UNIVERSITIES = [
   },
   {
     id: "alex",
+    website: "https://www.alexu.edu.eg/index.php/en/",
     featured: false,
     tuition: 15000,
     matchScore: 95,
@@ -49,6 +52,7 @@ const UNIVERSITIES = [
   },
   {
     id: "ainshams",
+    website: "https://www.asu.edu.eg/ar",
     featured: false,
     tuition: 13000,
     matchScore: 78,
@@ -62,6 +66,7 @@ const UNIVERSITIES = [
   },
   {
     id: "guc",
+    website: "https://www.guc.edu.eg/",
     featured: true,
     tuition: 40000,
     matchScore: 90,
@@ -75,6 +80,7 @@ const UNIVERSITIES = [
   },
   {
     id: "nile",
+    website: "https://www.nu.edu.eg/",
     featured: false,
     tuition: 32000,
     matchScore: 85,
@@ -107,7 +113,6 @@ export default function EduMatch() {
 
   const copy = useMemo(
     () => ({
-      back: isArabic ? "رجوع" : "Back",
       eyebrow: isArabic ? "إيديو ماتش" : "EduMatch",
       title: isArabic ? "بوصلتك الأكاديمية" : "Your academic GPS",
       tagline: isArabic
@@ -142,11 +147,6 @@ export default function EduMatch() {
     <main className="homeMain" aria-label={isArabic ? "إيديو ماتش" : "EduMatch"}>
       <section className="eduMatchPage">
         <div className="eduMatchInner">
-          <Link className="eduMatchBack" to="/">
-            <span aria-hidden>{isRtl ? "→" : "←"}</span>
-            {copy.back}
-          </Link>
-
           <p className="eduMatchEyebrow">{copy.eyebrow}</p>
           <h1 className="eduMatchTitle">{copy.title}</h1>
           <p className="eduMatchTagline">{copy.tagline}</p>
@@ -286,9 +286,14 @@ export default function EduMatch() {
                           </div>
                         </div>
                         <div className="eduMatchCardActions">
-                          <button type="button" className="eduMatchBtnSolid">
+                          <a
+                            className="eduMatchBtnSolid"
+                            href={u.website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             {copy.learnMore}
-                          </button>
+                          </a>
                           <button type="button" className="eduMatchBtnOutline">
                             {copy.compare}
                           </button>
