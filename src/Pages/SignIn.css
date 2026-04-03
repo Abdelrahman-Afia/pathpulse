@@ -107,6 +107,25 @@
   overflow-y: auto;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pp-blue, #004e98) var(--pp-scrollbar-track, rgba(0, 78, 152, 0.09));
+}
+
+.signInFormCol::-webkit-scrollbar {
+  width: 8px;
+}
+
+.signInFormCol::-webkit-scrollbar-track {
+  background: var(--pp-scrollbar-track, rgba(0, 78, 152, 0.09));
+}
+
+.signInFormCol::-webkit-scrollbar-thumb {
+  background-color: var(--pp-blue, #004e98);
+  border-radius: 999px;
+}
+
+.signInFormCol::-webkit-scrollbar-thumb:hover {
+  background-color: var(--pp-blue-hover, #003f7a);
 }
 
 .signInTitle {
@@ -117,6 +136,13 @@
 
 .signInForm.sectionEightForm {
   max-width: 100%;
+}
+
+.signUpMatchError {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #c62828;
 }
 
 .signInSubmitBtn.navbarStartFree {
@@ -252,6 +278,10 @@
   display: block;
   object-fit: cover;
   object-position: center 22%;
+}
+
+.signUpVisual {
+  object-position: center 28%;
 }
 
 @media (max-width: 900px) {

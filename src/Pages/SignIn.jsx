@@ -118,7 +118,7 @@ export default function SignIn() {
 
             <p className="signInSignup">
               {isArabic ? "ليس لديك حساب؟ " : "Don’t have an account? "}
-              <Link className="signInSignupLink" to="/">
+              <Link className="signInSignupLink" to="/sign-up">
                 {isArabic ? "سجّل الآن!" : "Sign up now!"}
               </Link>
             </p>

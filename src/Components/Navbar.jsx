@@ -135,14 +135,14 @@ export default function Navbar({ language, onLanguageChange, logoSrc }) {
             {isArabic ? 'تسجيل الدخول' : 'Sign in'}
           </Link>
 
-          <a className="navbarStartFree" href="/">
+          <Link className="navbarStartFree" to="/sign-up">
             <span className="navbarStartFreeText">
               {isArabic ? 'ابدأ مجانا' : 'Start free'}
             </span>
             <div className="arrow-wrapper" aria-hidden="true">
               <div className="arrow" />
             </div>
-          </a>
+          </Link>
         </div>
 
         <button
@@ -198,9 +198,9 @@ export default function Navbar({ language, onLanguageChange, logoSrc }) {
           >
             {isArabic ? 'تسجيل الدخول' : 'Sign in'}
           </Link>
-          <a
+          <Link
             className="navbarMobileStartFree"
-            href="/"
+            to="/sign-up"
             onClick={() => setMobileMenuOpen(false)}
           >
             <span className="navbarStartFreeText">
@@ -209,7 +209,7 @@ export default function Navbar({ language, onLanguageChange, logoSrc }) {
             <div className="arrow-wrapper" aria-hidden="true">
               <div className="arrow" />
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </header>

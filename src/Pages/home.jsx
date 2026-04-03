@@ -29,19 +29,19 @@ export default function Home() {
         <MotionSection preset="up-subtle" amount={0.2} rtl={isRtl}>
           <Hero language={language} />
         </MotionSection>
-        <MotionSection preset="right" amount={0.12} rtl={isRtl}>
+        <MotionSection preset="up" amount={0.12} rtl={isRtl}>
           <SectionTwo language={language} />
         </MotionSection>
-        <MotionSection preset="left" amount={0.12} rtl={isRtl}>
+        <MotionSection preset="up-subtle" amount={0.12} rtl={isRtl}>
           <SectionThree language={language} />
         </MotionSection>
         <MotionSection preset="up" amount={0.12} rtl={isRtl}>
           <SectionFour language={language} />
         </MotionSection>
-        <MotionSection preset="right" amount={0.12} rtl={isRtl}>
+        <MotionSection preset="up-subtle" amount={0.12} rtl={isRtl}>
           <SectionFive language={language} />
         </MotionSection>
-        <MotionSection preset="left" amount={0.12} rtl={isRtl}>
+        <MotionSection preset="up" amount={0.12} rtl={isRtl}>
           <SectionSix language={language} />
         </MotionSection>
         <MotionSection preset="up-subtle" amount={0.12} rtl={isRtl}>

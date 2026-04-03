@@ -1,6 +1,8 @@
 .homeRoot {
   min-height: 100vh;
   background: #ffffff;
+  width: 100%;
+  max-width: 100%;
 }
 
 .homeMain {
