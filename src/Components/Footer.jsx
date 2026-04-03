@@ -58,7 +58,7 @@ function SocialIcon({ name }) {
 const discoverKeys = [
   { key: "pathfinder", en: "Pathfinder", ar: "باث فايندر", path: "/pathfinder" },
   { key: "focuspal", en: "FocusPal", ar: "فوكاس بال", path: "/focuspal" },
-  { key: "ideafit", en: "Ideafit", ar: "إيديا فيت", path: "/" },
+  { key: "ideafit", en: "Ideafit", ar: "إيديا فيت", path: "/ideafit" },
   { key: "futureradar", en: "FutureRadar", ar: "فيوتشر رادار", path: "/" },
   { key: "edumatch", en: "EduMatch", ar: "إيديو ماتش", path: "/" },
 ];

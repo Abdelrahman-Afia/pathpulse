@@ -1,0 +1,440 @@
+.ideafitPage {
+  background: #ffffff;
+  padding: 28px 22px 80px;
+  font-family:
+    "Cairo",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+  color: #004e98;
+}
+
+.ideafitInner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.ideafitBackNav {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 18px;
+  padding: 8px 0;
+  font-size: 16px;
+  font-weight: 800;
+  color: #004e98;
+  text-decoration: none;
+}
+
+.ideafitBackNav:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.ideafitEyebrow {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #004e98;
+}
+
+.ideafitTitle {
+  margin: 0 0 10px;
+  font-size: clamp(24px, 3.8vw, 38px);
+  line-height: 1.12;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  color: #004e98;
+}
+
+.ideafitSubtitle {
+  margin: 0 auto 36px;
+  max-width: 520px;
+  font-size: clamp(15px, 1.4vw, 18px);
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  color: #004e98;
+  opacity: 0.95;
+}
+
+.ideafitHero {
+  display: grid;
+  grid-template-columns: minmax(260px, 380px) 1fr;
+  gap: 32px;
+  align-items: start;
+  margin-bottom: 48px;
+}
+
+.ideafitWheelColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.ideafitWheelStage {
+  position: relative;
+  width: min(100%, 340px);
+  aspect-ratio: 1;
+}
+
+.ideafitWheelPointer {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 16px solid #004e98;
+  z-index: 2;
+}
+
+.ideafitWheelRotate {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: transform 3.4s cubic-bezier(0.18, 0.85, 0.28, 0.99);
+}
+
+.ideafitWheelRotate--instant {
+  transition: none;
+}
+
+.ideafitWheelSvg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.ideafitWheelHubImage {
+  pointer-events: none;
+}
+
+.ideafitWheelCenter {
+  fill: #004e98;
+}
+
+.ideafitWheelSlice {
+  fill: #ffffff;
+  stroke: #004e98;
+  stroke-width: 1.5;
+}
+
+.ideafitBulb {
+  fill: #ffffff;
+}
+
+.ideafitSpinBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 340px;
+  padding: 16px 24px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #004e98;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.ideafitSpinBtn:hover:not(:disabled) {
+  opacity: 0.92;
+  transform: scale(1.02);
+}
+
+.ideafitSpinBtn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.ideafitSpinBtn:focus-visible {
+  outline: 2px solid #004e98;
+  outline-offset: 3px;
+}
+
+.ideafitSpinIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Result card */
+.ideafitResult {
+  box-sizing: border-box;
+  min-height: 280px;
+  padding: 28px 24px 26px;
+  border: 1px solid #004e98;
+  border-radius: 28px;
+  background: #fff;
+}
+
+.ideafitResultEmpty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+  min-height: 240px;
+  padding: 20px;
+}
+
+.ideafitResultEmptyIcon {
+  width: 48px;
+  height: 48px;
+  color: #004e98;
+  opacity: 0.85;
+}
+
+.ideafitResultEmptyText {
+  margin: 0;
+  max-width: 320px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #004e98;
+  opacity: 0.55;
+}
+
+.ideafitResultHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.ideafitBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  border: none;
+}
+
+.ideafitBadge--track {
+  background: rgba(0, 180, 216, 0.22);
+  color: #004e98;
+}
+
+.ideafitBadge--level-yellow {
+  background: #ffe066;
+  color: #1a3a52;
+}
+
+.ideafitBadge--level-pink {
+  background: #ffc2d4;
+  color: #4a1528;
+}
+
+.ideafitResultTitle {
+  margin: 0 0 12px;
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 800;
+  line-height: 1.25;
+  color: #004e98;
+}
+
+.ideafitResultDesc {
+  margin: 0 0 18px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.55;
+  color: #004e98;
+  opacity: 0.92;
+}
+
+.ideafitSkillsLabel {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #004e98;
+}
+
+.ideafitSkillRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.ideafitSkillPill {
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #004e98;
+  background: #fff;
+  border: 1px solid #004e98;
+  border-radius: 999px;
+}
+
+.ideafitResultMeta {
+  margin: 0 0 20px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #004e98;
+}
+
+.ideafitResultActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.ideafitBtnPrimary {
+  padding: 14px 22px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #004e98;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.ideafitBtnPrimary:hover {
+  opacity: 0.9;
+}
+
+.ideafitBtnGhost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #004e98;
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid #004e98;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.ideafitBtnGhost:hover {
+  background: rgba(0, 180, 216, 0.22);
+}
+
+/* Challenges */
+.ideafitSectionTitle {
+  margin: 0 0 22px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #004e98;
+}
+
+.ideafitChallengeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.ideafitChallengeCard {
+  box-sizing: border-box;
+  padding: 20px 18px 18px;
+  border: 1px solid #004e98;
+  border-radius: 24px;
+  background: #fff;
+  text-align: start;
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.ideafitChallengeCard:hover {
+  transform: scale(1.02);
+}
+
+.ideafitChallengeTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.ideafitChallengeTitle {
+  margin: 0 0 10px;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.3;
+  color: #004e98;
+}
+
+.ideafitChallengeDesc {
+  margin: 0 0 14px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #004e98;
+  opacity: 0.9;
+}
+
+.ideafitChallengeTime {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 800;
+  color: #004e98;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ideafitWheelRotate {
+    transition: none;
+  }
+
+  .ideafitChallengeCard:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .ideafitHero {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .ideafitResult {
+    width: 100%;
+    max-width: 560px;
+  }
+
+  .ideafitChallengeGrid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}

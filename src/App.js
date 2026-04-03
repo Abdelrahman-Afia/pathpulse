@@ -8,6 +8,7 @@ import Pathfinder from "./Pages/Pathfinder";
 import PathfinderQuestions from "./Pages/PathfinderQuestions";
 import PathfinderResults from "./Pages/PathfinderResults";
 import FocusPal from "./Pages/FocusPal";
+import Ideafit from "./Pages/Ideafit";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 
@@ -23,6 +24,7 @@ function App() {
             <Route path="/pathfinder/questions" element={<PathfinderQuestions />} />
             <Route path="/pathfinder/results" element={<PathfinderResults />} />
             <Route path="/focuspal" element={<FocusPal />} />
+            <Route path="/ideafit" element={<Ideafit />} />
           </Route>
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
