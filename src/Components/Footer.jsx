@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 function SocialIcon({ name }) {
@@ -55,11 +56,11 @@ function SocialIcon({ name }) {
 }
 
 const discoverKeys = [
-  { key: "pathfinder", en: "Pathfinder", ar: "باث فايندر" },
-  { key: "focuspal", en: "FocusPal", ar: "فوكاس بال" },
-  { key: "ideafit", en: "Ideafit", ar: "إيديا فيت" },
-  { key: "futureradar", en: "FutureRadar", ar: "فيوتشر رادار" },
-  { key: "edumatch", en: "EduMatch", ar: "إيديو ماتش" },
+  { key: "pathfinder", en: "Pathfinder", ar: "باث فايندر", path: "/pathfinder" },
+  { key: "focuspal", en: "FocusPal", ar: "فوكاس بال", path: "/focuspal" },
+  { key: "ideafit", en: "Ideafit", ar: "إيديا فيت", path: "/" },
+  { key: "futureradar", en: "FutureRadar", ar: "فيوتشر رادار", path: "/" },
+  { key: "edumatch", en: "EduMatch", ar: "إيديو ماتش", path: "/" },
 ];
 
 const buildLinks = [
@@ -89,9 +90,9 @@ export default function Footer({ language, logoSrc }) {
       <div className="footerInner">
         <div className="footerTop">
           <div className="footerCol footerColBrand">
-            <a className="footerLogoLink" href="/" aria-label="PathPulse home">
+            <Link className="footerLogoLink" to="/" aria-label="PathPulse home">
               <img className="footerLogo" src={logoSrc} alt="" width={160} height={40} />
-            </a>
+            </Link>
             <p className="footerTagline">
               {isArabic
                 ? "ابقَ على النبض. تلقَّ تحديثات حول المسارات والأدوات الجديدة."
@@ -126,9 +127,9 @@ export default function Footer({ language, logoSrc }) {
             <ul className="footerList">
               {discoverKeys.map((item) => (
                 <li key={item.key}>
-                  <a className="footerLink" href="/">
+                  <Link className="footerLink" to={item.path}>
                     {isArabic ? item.ar : item.en}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

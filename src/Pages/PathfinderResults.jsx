@@ -70,7 +70,7 @@ export default function PathfinderResults() {
           </div>
 
           <div className="pathfinderResultsActions">
-            <Link className="pathfinderResultsCta" to="/">
+            <Link className="pathfinderResultsCta" to="/focuspal">
               {copy.dashboard}
             </Link>
             <button

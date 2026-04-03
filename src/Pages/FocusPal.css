@@ -1,0 +1,391 @@
+.focuspalPage {
+  background: #ffffff;
+  padding: 32px 22px 100px;
+  font-family:
+    "Cairo",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+  color: #004e98;
+}
+
+.focuspalInner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.focuspalEyebrow {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #004e98;
+}
+
+.focuspalTitle {
+  margin: 0 0 12px;
+  font-size: clamp(26px, 4vw, 42px);
+  line-height: 1.12;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #004e98;
+}
+
+.focuspalSubtitle {
+  margin: 0 auto 36px;
+  max-width: 560px;
+  font-size: clamp(15px, 1.4vw, 18px);
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  color: #004e98;
+  opacity: 0.95;
+}
+
+/* Vitality hero card */
+.focuspalVitality {
+  display: grid;
+  grid-template-columns: 1fr minmax(200px, 280px);
+  gap: 28px;
+  align-items: stretch;
+  padding: 28px 26px;
+  margin-bottom: 28px;
+  background: #ffffff;
+  border: 1px solid #004e98;
+  border-radius: 28px;
+  box-sizing: border-box;
+}
+
+.focuspalVitalityMain {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.focuspalVitalityLabelRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #004e98;
+}
+
+.focuspalPulseIcon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  color: #004e98;
+}
+
+.focuspalVitalityScore {
+  margin: 0;
+  font-size: clamp(48px, 9vw, 88px);
+  line-height: 1;
+  font-weight: 800;
+  color: #004e98;
+}
+
+.focuspalVitalityCaption {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #004e98;
+  opacity: 0.92;
+}
+
+.focuspalVitalitySide {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.focuspalMiniMetric {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid #004e98;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.focuspalMiniIcon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: #004e98;
+}
+
+.focuspalMiniText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.focuspalMiniLabel {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #004e98;
+  opacity: 0.85;
+}
+
+.focuspalMiniValue {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  color: #004e98;
+}
+
+/* Middle row */
+.focuspalMidRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 28px;
+  align-items: stretch;
+}
+
+.focuspalPanel {
+  box-sizing: border-box;
+  padding: 22px 20px 24px;
+  background: #ffffff;
+  border: 1px solid #004e98;
+  border-radius: 28px;
+  min-height: 0;
+}
+
+.focuspalPanelHead {
+  margin: 0 0 18px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #004e98;
+  border-bottom: 2px solid #004e98;
+}
+
+/* Timeline */
+.focuspalTimeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.focuspalTimelineItem {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 14px;
+  padding-bottom: 18px;
+  position: relative;
+}
+
+.focuspalTimelineItem:last-child {
+  padding-bottom: 0;
+}
+
+.focuspalTimelineItem:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 13px;
+  top: 28px;
+  bottom: 0;
+  width: 2px;
+  background: rgba(0, 78, 152, 0.25);
+}
+
+.focuspalTimelineDot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #004e98;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.focuspalTimelineDot--done {
+  background: #004e98;
+  color: #fff;
+  border-color: #004e98;
+}
+
+.focuspalTimelineDot--done svg {
+  width: 14px;
+  height: 14px;
+}
+
+.focuspalTimelineDot--upcoming::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #004e98;
+}
+
+.focuspalTimelineTitle {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #004e98;
+}
+
+.focuspalTimelineSub {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #004e98;
+  opacity: 0.75;
+}
+
+/* Radar */
+.focuspalRadarWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.focuspalRadarSvg {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  display: block;
+}
+
+.focuspalRadarLegend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+
+.focuspalRadarLegendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #004e98;
+}
+
+.focuspalLegendSwatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.focuspalLegendSwatch--you {
+  background: rgba(0, 180, 216, 0.55);
+  border: 1px solid #00b4d8;
+}
+
+.focuspalLegendSwatch--market {
+  background: #fff;
+  border: 2px dashed #e9c46a;
+}
+
+.focuspalInsight {
+  margin-top: 16px;
+  padding: 14px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #004e98;
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 78, 152, 0.35);
+  border-radius: 16px;
+}
+
+/* Bottom action cards */
+.focuspalActions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.focuspalActionCard {
+  box-sizing: border-box;
+  padding: 20px 18px;
+  background: #fff;
+  border: 1px solid #004e98;
+  border-radius: 24px;
+  transition: all 0.5s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  text-align: center;
+}
+
+.focuspalActionCard:hover {
+  transform: scale(1.03);
+}
+
+.focuspalActionCard:active {
+  transform: scale(0.97) rotateZ(1.2deg);
+}
+
+.focuspalActionTitle {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #004e98;
+}
+
+.focuspalActionSub {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #004e98;
+  opacity: 0.88;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .focuspalActionCard {
+    transition: none;
+  }
+
+  .focuspalActionCard:hover,
+  .focuspalActionCard:active {
+    transform: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .focuspalVitality {
+    grid-template-columns: 1fr;
+  }
+
+  .focuspalMidRow {
+    grid-template-columns: 1fr;
+  }
+
+  .focuspalActions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .focuspalPage {
+    padding: 24px 16px 88px;
+  }
+}

@@ -89,7 +89,7 @@ export default function Navbar({ language, onLanguageChange, logoSrc }) {
   const links = useMemo(
     () => [
       { key: 'pathfinder', en: 'Pathfinder', ar: 'باث فايندر', path: '/pathfinder' },
-      { key: 'focuspal', en: 'FocusPal', ar: 'فوكاس بال', path: '/' },
+      { key: 'focuspal', en: 'FocusPal', ar: 'فوكاس بال', path: '/focuspal' },
       { key: 'ideafit', en: 'Ideafit', ar: 'ايديا فيت', path: '/' },
       { key: 'futureradar', en: 'FutureRadar', ar: 'فيوتشر رادار', path: '/' },
       { key: 'edumatch', en: 'EduMatch', ar: 'اديو ماتش', path: '/' },
