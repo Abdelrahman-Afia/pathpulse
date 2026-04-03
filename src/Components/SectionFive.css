@@ -1,0 +1,249 @@
+.sectionFive {
+  background: #ffffff;
+  padding: 52px 22px 80px;
+  font-family:
+    "Cairo",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  color: #004e98;
+}
+
+.sectionFiveInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionFiveHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 40px;
+  align-items: start;
+  margin-bottom: 36px;
+}
+
+.sectionFiveTitle {
+  margin: 0;
+  font-size: clamp(26px, 3.6vw, 44px);
+  line-height: 1.2;
+  font-weight: 800;
+  max-width: 34ch;
+}
+
+.sectionFiveLead {
+  margin: 0;
+  justify-self: end;
+  max-width: 42ch;
+  font-size: clamp(16px, 1.5vw, 22px);
+  line-height: 1.55;
+  font-weight: 600;
+}
+
+.sectionFiveGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: stretch;
+  min-height: 420px;
+}
+
+.sectionFiveCardTall {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+.sectionFiveMediaTop {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.sectionFiveCardMid {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.sectionFiveCardTopRight {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.sectionFiveMediaBottom {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.sectionFiveCard {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 22px;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid #ffffff;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 28px;
+  min-height: 0;
+  cursor: pointer;
+  transition: all 0.5s;
+  user-select: none;
+}
+
+.sectionFiveCard:hover {
+  border: 1px solid #004e98;
+  transform: scale(1.05);
+}
+
+.sectionFiveCard:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.sectionFiveMedia {
+  box-sizing: border-box;
+  border-radius: 28px;
+  overflow: hidden;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid #ffffff;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  min-height: 0;
+  cursor: pointer;
+  transition: all 0.5s;
+  user-select: none;
+}
+
+.sectionFiveMedia:hover {
+  border: 1px solid #004e98;
+  transform: scale(1.05);
+}
+
+.sectionFiveMedia:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sectionFiveCard,
+  .sectionFiveMedia {
+    transition: none;
+  }
+
+  .sectionFiveCard:hover,
+  .sectionFiveCard:active,
+  .sectionFiveMedia:hover,
+  .sectionFiveMedia:active {
+    transform: none;
+  }
+}
+
+.sectionFiveCardShort {
+  min-height: 180px;
+}
+
+.sectionFiveSrOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.sectionFiveFigure {
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.sectionFiveCountWrap {
+  font-variant-numeric: tabular-nums;
+}
+
+.sectionFiveFigureSm {
+  font-size: clamp(40px, 5.5vw, 64px);
+}
+
+.sectionFiveCardFoot {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.sectionFiveCardLabel {
+  font-size: clamp(17px, 1.6vw, 22px);
+  font-weight: 800;
+}
+
+.sectionFiveCardSub {
+  font-size: clamp(14px, 1.25vw, 18px);
+  font-weight: 600;
+  line-height: 1.4;
+  opacity: 0.95;
+}
+
+.sectionFiveImg {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .sectionFive {
+    padding: 36px 14px 56px;
+  }
+
+  .sectionFiveHeader {
+    grid-template-columns: 1fr;
+    margin-bottom: 28px;
+  }
+
+  .sectionFiveLead {
+    justify-self: start;
+    max-width: none;
+  }
+
+  .sectionFiveGrid {
+    display: flex;
+    flex-direction: column;
+    min-height: unset;
+    gap: 18px;
+  }
+
+  .sectionFiveCardTall {
+    order: 1;
+    min-height: 260px;
+  }
+
+  .sectionFiveMediaTop {
+    order: 2;
+  }
+
+  .sectionFiveCardMid {
+    order: 3;
+  }
+
+  .sectionFiveCardTopRight {
+    order: 4;
+  }
+
+  .sectionFiveMediaBottom {
+    order: 5;
+  }
+
+  .sectionFiveMedia .sectionFiveImg {
+    min-height: 220px;
+    max-height: 320px;
+  }
+}

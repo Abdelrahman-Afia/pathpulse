@@ -6,6 +6,7 @@ import Hero from "../Components/Hero";
 import SectionTwo from "../Components/SectionTwo";
 import SectionThree from "../Components/SectionThree";
 import SectionFour from "../Components/SectionFour";
+import SectionFive from "../Components/SectionFive";
 
 export default function Home() {
   const [language, setLanguage] = useState("en");
@@ -23,6 +24,7 @@ export default function Home() {
         <SectionTwo language={language} />
         <SectionThree language={language} />
         <SectionFour language={language} />
+        <SectionFive language={language} />
       </main>
     </div>
   );
