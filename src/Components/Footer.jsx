@@ -195,9 +195,9 @@ export default function Footer({ language, logoSrc }) {
               />
               {isArabic ? "شروط الخدمة" : "Terms of Service"}
             </Link>
-            <a className="footerLegalLink" href="/">
+            <Link className="footerLegalLink" to="/cookie-settings">
               {isArabic ? "إعدادات ملفات تعريف الارتباط" : "Cookies Settings"}
-            </a>
+            </Link>
           </nav>
         </div>
       </div>

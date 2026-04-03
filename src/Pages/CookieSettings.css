@@ -1,0 +1,381 @@
+.cookiePage {
+  background: #ffffff;
+  padding-top: 24px;
+  padding-bottom: 72px;
+  padding-left: max(clamp(14px, 4.5vw, 22px), env(safe-area-inset-left, 0px));
+  padding-right: max(clamp(14px, 4.5vw, 22px), env(safe-area-inset-right, 0px));
+  font-family:
+    "Cairo",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+  color: #004e98;
+}
+
+.cookieInner {
+  max-width: 720px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cookieBack {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 22px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #004e98;
+  text-decoration: none;
+}
+
+.cookieBack:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cookiePageHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  text-align: start;
+}
+
+.cookiePageIconWrap {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 78, 152, 0.3);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.cookiePageIcon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.cookiePageTitles {
+  min-width: 0;
+}
+
+.cookiePageTitle {
+  margin: 0 0 6px;
+  font-size: clamp(20px, 3.5vw, 28px);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.15;
+  color: #004e98;
+}
+
+.cookiePageTitle--ar {
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.cookiePageSub {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #004e98;
+  opacity: 0.85;
+}
+
+.cookieIntro {
+  margin: 0 0 28px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.65;
+  color: #004e98;
+  opacity: 0.9;
+}
+
+.cookieIntro p {
+  margin: 0 0 14px;
+}
+
+.cookieIntro p:last-child {
+  margin-bottom: 0;
+}
+
+.cookieCard {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 18px;
+  margin-bottom: 14px;
+  background: #fff;
+  border: 1px solid #004e98;
+  border-radius: 12px;
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.cookieCard:hover {
+  transform: scale(1.015);
+}
+
+.cookieCard:active {
+  transform: scale(0.99) rotateZ(0.5deg);
+}
+
+.cookieCardBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.cookieCardHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.cookieCardTitle {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 800;
+  color: #004e98;
+}
+
+.cookieBadge {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #004e98;
+  border-radius: 999px;
+}
+
+.cookieCardDesc {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.55;
+  color: #004e98;
+  opacity: 0.88;
+}
+
+.cookieCardExamples {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.45;
+  color: #5a6b7a;
+}
+
+.cookieToggleWrap {
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.cookieToggle {
+  position: relative;
+  width: 52px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: #c5d4e0;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.cookieToggle:focus-visible {
+  outline: 2px solid #004e98;
+  outline-offset: 3px;
+}
+
+.cookieToggle--on {
+  background: #004e98;
+}
+
+.cookieToggle--disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+.cookieToggleKnob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+  pointer-events: none;
+}
+
+.cookieToggle--on .cookieToggleKnob {
+  transform: translateX(24px);
+}
+
+.homeRoot[dir="rtl"] .cookieToggleKnob {
+  left: auto;
+  right: 3px;
+}
+
+.homeRoot[dir="rtl"] .cookieToggle--on .cookieToggleKnob {
+  transform: translateX(-24px);
+}
+
+.cookieActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 28px 0 24px;
+}
+
+.cookieBtnPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 24px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #004e98;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.cookieBtnPrimary:hover {
+  opacity: 0.93;
+  transform: scale(1.02);
+}
+
+.cookieBtnGhost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #004e98;
+  background: #fff;
+  border: 2px solid #004e98;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.cookieBtnGhost:hover {
+  background: rgba(0, 78, 152, 0.06);
+  transform: scale(1.02);
+}
+
+.cookieInfoBox {
+  padding: 20px 18px;
+  border: 1px solid rgba(0, 78, 152, 0.28);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.cookieInfoTitle {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #004e98;
+}
+
+.cookieInfoText {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.55;
+  color: #5a6b7a;
+}
+
+.cookieInfoLinks {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+}
+
+.cookieInfoLink {
+  font-size: 14px;
+  font-weight: 800;
+  color: #004e98;
+  text-decoration: none;
+}
+
+.cookieInfoLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cookieCard,
+  .cookieBtnPrimary,
+  .cookieBtnGhost {
+    transition: none;
+  }
+
+  .cookieCard:hover,
+  .cookieCard:active,
+  .cookieBtnPrimary:hover,
+  .cookieBtnGhost:hover {
+    transform: none;
+  }
+
+  .cookieToggle,
+  .cookieToggleKnob {
+    transition: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .cookiePageHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cookieCard {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cookieToggleWrap {
+    align-self: flex-end;
+    padding-top: 0;
+  }
+
+  .cookieActions {
+    flex-direction: column;
+  }
+
+  .cookieBtnPrimary,
+  .cookieBtnGhost {
+    width: 100%;
+  }
+}
