@@ -55,14 +55,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(0, 78, 152, 0.3);
-  border-radius: 12px;
-  background: #fff;
 }
 
 .cookiePageIcon {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
 }
 

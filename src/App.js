@@ -17,6 +17,7 @@ import AboutUs from "./Pages/AboutUs";
 import Careers from "./Pages/Careers";
 import Blog from "./Pages/Blog";
 import CookieSettings from "./Pages/CookieSettings";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 
@@ -40,6 +41,7 @@ function App() {
             <Route path="/careers" element={<Careers />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/cookie-settings" element={<CookieSettings />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Route>
           <Route path="/sign-in" element={<SignIn />} />

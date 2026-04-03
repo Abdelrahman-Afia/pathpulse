@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import termsDocumentIcon from "../Assets/Terms Of Service Icon.png";
 
 function SocialIcon({ name }) {
   const common = { className: "footerSocialSvg", viewBox: "0 0 24 24", "aria-hidden": true };
@@ -182,17 +181,10 @@ export default function Footer({ language, logoSrc }) {
             {isArabic ? "© ٢٠٢٦ PathPulse. جميع الحقوق محفوظة." : "© 2026 PathPulse. All rights reserved."}
           </p>
           <nav className="footerLegal" aria-label={isArabic ? "قانوني" : "Legal"}>
-            <a className="footerLegalLink" href="/">
+            <Link className="footerLegalLink" to="/privacy-policy">
               {isArabic ? "سياسة الخصوصية" : "Privacy Policy"}
-            </a>
-            <Link className="footerLegalLink footerLegalLinkTerms" to="/terms-of-service">
-              <img
-                className="footerLegalIcon"
-                src={termsDocumentIcon}
-                alt=""
-                width={18}
-                height={18}
-              />
+            </Link>
+            <Link className="footerLegalLink" to="/terms-of-service">
               {isArabic ? "شروط الخدمة" : "Terms of Service"}
             </Link>
             <Link className="footerLegalLink" to="/cookie-settings">

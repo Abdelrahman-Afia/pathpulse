@@ -173,7 +173,7 @@ export default function CookieSettings() {
 
           <header className="cookiePageHeader">
             <div className="cookiePageIconWrap">
-              <img className="cookiePageIcon" src={cookieIcon} alt="" width={40} height={40} />
+              <img className="cookiePageIcon" src={cookieIcon} alt="" width={48} height={48} />
             </div>
             <div className="cookiePageTitles">
               <h1 className={`cookiePageTitle${isArabic ? " cookiePageTitle--ar" : ""}`}>{copy.title}</h1>
@@ -229,9 +229,9 @@ export default function CookieSettings() {
             <h3 className="cookieInfoTitle">{copy.needInfo}</h3>
             <p className="cookieInfoText">{copy.needInfoBody}</p>
             <div className="cookieInfoLinks">
-              <a className="cookieInfoLink" href="/">
+              <Link className="cookieInfoLink" to="/privacy-policy">
                 {copy.privacy}
-              </a>
+              </Link>
               <Link className="cookieInfoLink" to="/terms-of-service">
                 {copy.terms}
               </Link>
