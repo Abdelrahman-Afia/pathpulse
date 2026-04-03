@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Link, useOutletContext } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 import "./home.css";
 import "./Careers.css";
 import MotionSection from "../Components/MotionSection";
