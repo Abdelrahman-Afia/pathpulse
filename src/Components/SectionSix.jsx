@@ -1,6 +1,6 @@
 import "./SectionSix.css";
 import amiraHassan from "../Assets/Amira Hassan.png";
-import omarKhalil from "../Assets/Omar Khalil.png";
+import omarKhalil from "../Assets/omar-khalil.png";
 import laylaMansour from "../Assets/Layla Mansour.png";
 
 const testimonials = [

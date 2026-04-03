@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { LanguageMenu } from "../Components/Navbar";
+import { useAuth } from "../context/AuthContext";
 import logo from "../Assets/Vector.svg";
 import signinVisual from "../Assets/Signin Page.png";
 import iconApple from "../Assets/apple.png";
@@ -11,9 +12,12 @@ import "./home.css";
 import "./SignIn.css";
 
 export default function SignIn() {
+  const navigate = useNavigate();
+  const { signIn } = useAuth();
   const [language, setLanguage] = useState("en");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [authError, setAuthError] = useState(false);
 
   const isArabic = language === "ar";
 
@@ -33,6 +37,12 @@ export default function SignIn() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    setAuthError(false);
+    if (signIn(email, password)) {
+      navigate("/", { replace: true });
+      return;
+    }
+    setAuthError(true);
   }
 
   return (
@@ -50,6 +60,14 @@ export default function SignIn() {
         <main className="signInMain">
           <div className="signInFormCol">
             <h1 className="signInTitle">{isArabic ? "تسجيل الدخول" : "Sign in"}</h1>
+
+            {authError ? (
+              <p className="signInAuthError" role="alert">
+                {isArabic
+                  ? "البريد الإلكتروني أو كلمة المرور غير صحيحة."
+                  : "Email or password is incorrect."}
+              </p>
+            ) : null}
 
             <form className="sectionEightForm signInForm" onSubmit={handleSubmit} noValidate>
               <div className="sectionEightInputGroup">

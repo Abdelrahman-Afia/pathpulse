@@ -1,5 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+import profileAvatar from '../Assets/omar-khalil.png';
 
 export function LanguageMenu({ language, onLanguageChange }) {
   const [open, setOpen] = useState(false);
@@ -80,6 +82,7 @@ export function LanguageMenu({ language, onLanguageChange }) {
 }
 
 export default function Navbar({ language, onLanguageChange, logoSrc }) {
+  const { isSignedIn, signOut } = useAuth();
   const isArabic = language === 'ar';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -131,18 +134,39 @@ export default function Navbar({ language, onLanguageChange, logoSrc }) {
             }}
           />
 
-          <Link className="navbarSignIn" to="/sign-in">
-            {isArabic ? 'تسجيل الدخول' : 'Sign in'}
-          </Link>
-
-          <Link className="navbarStartFree" to="/sign-up">
-            <span className="navbarStartFreeText">
-              {isArabic ? 'ابدأ مجانا' : 'Start free'}
-            </span>
-            <div className="arrow-wrapper" aria-hidden="true">
-              <div className="arrow" />
+          {isSignedIn ? (
+            <div className="navbarSignedIn">
+              <img
+                className="navbarProfileImg"
+                src={profileAvatar}
+                alt=""
+                width={46}
+                height={46}
+              />
+              <button
+                type="button"
+                className="navbarSignOut"
+                onClick={() => signOut()}
+              >
+                {isArabic ? 'خروج' : 'Sign out'}
+              </button>
             </div>
-          </Link>
+          ) : (
+            <>
+              <Link className="navbarSignIn" to="/sign-in">
+                {isArabic ? 'تسجيل الدخول' : 'Sign in'}
+              </Link>
+
+              <Link className="navbarStartFree" to="/sign-up">
+                <span className="navbarStartFreeText">
+                  {isArabic ? 'ابدأ مجانا' : 'Start free'}
+                </span>
+                <div className="arrow-wrapper" aria-hidden="true">
+                  <div className="arrow" />
+                </div>
+              </Link>
+            </>
+          )}
         </div>
 
         <button
@@ -191,25 +215,49 @@ export default function Navbar({ language, onLanguageChange, logoSrc }) {
             />
           </div>
 
-          <Link
-            className="navbarMobileSignIn"
-            to="/sign-in"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            {isArabic ? 'تسجيل الدخول' : 'Sign in'}
-          </Link>
-          <Link
-            className="navbarMobileStartFree"
-            to="/sign-up"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            <span className="navbarStartFreeText">
-              {isArabic ? 'ابدأ مجانا' : 'Start free'}
-            </span>
-            <div className="arrow-wrapper" aria-hidden="true">
-              <div className="arrow" />
+          {isSignedIn ? (
+            <div className="navbarMobileSignedIn">
+              <img
+                className="navbarProfileImg navbarMobileProfileImg"
+                src={profileAvatar}
+                alt=""
+                width={48}
+                height={48}
+              />
+              <button
+                type="button"
+                className="navbarMobileSignOut"
+                onClick={() => {
+                  signOut();
+                  setMobileMenuOpen(false);
+                }}
+              >
+                {isArabic ? 'خروج' : 'Sign out'}
+              </button>
             </div>
-          </Link>
+          ) : (
+            <>
+              <Link
+                className="navbarMobileSignIn"
+                to="/sign-in"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {isArabic ? 'تسجيل الدخول' : 'Sign in'}
+              </Link>
+              <Link
+                className="navbarMobileStartFree"
+                to="/sign-up"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span className="navbarStartFreeText">
+                  {isArabic ? 'ابدأ مجانا' : 'Start free'}
+                </span>
+                <div className="arrow-wrapper" aria-hidden="true">
+                  <div className="arrow" />
+                </div>
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </header>

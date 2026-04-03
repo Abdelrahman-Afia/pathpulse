@@ -134,6 +134,16 @@
   font-weight: 800;
 }
 
+.signInAuthError {
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #c62828;
+  background: rgba(198, 40, 40, 0.08);
+  border-radius: 10px;
+}
+
 .signInForm.sectionEightForm {
   max-width: 100%;
 }

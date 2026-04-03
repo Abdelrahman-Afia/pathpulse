@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import { AuthProvider } from "./context/AuthContext";
 import Home from "./Pages/home";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
@@ -7,11 +8,13 @@ import SignUp from "./Pages/SignUp";
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/sign-up" element={<SignUp />} />
-      </Routes>
+      <AuthProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/sign-up" element={<SignUp />} />
+        </Routes>
+      </AuthProvider>
     </BrowserRouter>
   );
 }
