@@ -92,7 +92,7 @@ export default function Navbar({ language, onLanguageChange, logoSrc }) {
       { key: 'focuspal', en: 'FocusPal', ar: 'فوكاس بال', path: '/focuspal' },
       { key: 'ideafit', en: 'Ideafit', ar: 'ايديا فيت', path: '/ideafit' },
       { key: 'futureradar', en: 'FutureRadar', ar: 'فيوتشر رادار', path: '/futureradar' },
-      { key: 'edumatch', en: 'EduMatch', ar: 'اديو ماتش', path: '/' },
+      { key: 'edumatch', en: 'EduMatch', ar: 'اديو ماتش', path: '/edumatch' },
     ],
     []
   );

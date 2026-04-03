@@ -60,7 +60,7 @@ const discoverKeys = [
   { key: "focuspal", en: "FocusPal", ar: "فوكاس بال", path: "/focuspal" },
   { key: "ideafit", en: "Ideafit", ar: "إيديا فيت", path: "/ideafit" },
   { key: "futureradar", en: "FutureRadar", ar: "فيوتشر رادار", path: "/futureradar" },
-  { key: "edumatch", en: "EduMatch", ar: "إيديو ماتش", path: "/" },
+  { key: "edumatch", en: "EduMatch", ar: "إيديو ماتش", path: "/edumatch" },
 ];
 
 const buildLinks = [

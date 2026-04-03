@@ -1,0 +1,359 @@
+.eduMatchPage {
+  background: #ffffff;
+  padding: 28px 22px 80px;
+  font-family:
+    "Cairo",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+  color: #004e98;
+}
+
+.eduMatchInner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.eduMatchBack {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 18px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #004e98;
+  text-decoration: none;
+}
+
+.eduMatchBack:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.eduMatchEyebrow {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #004e98;
+}
+
+.eduMatchTitle {
+  margin: 0 0 10px;
+  font-size: clamp(24px, 3.8vw, 38px);
+  line-height: 1.12;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  color: #004e98;
+}
+
+.eduMatchTagline {
+  margin: 0 auto 32px;
+  max-width: 520px;
+  font-size: clamp(15px, 1.4vw, 18px);
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  color: #004e98;
+  opacity: 0.88;
+}
+
+.eduMatchLayout {
+  display: grid;
+  grid-template-columns: minmax(260px, 320px) 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+/* Sidebar cards */
+.eduMatchPanel {
+  box-sizing: border-box;
+  padding: 18px 16px 20px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(0, 78, 152, 0.45);
+  border-radius: 20px;
+  background: #fff;
+}
+
+.eduMatchPanel:last-child {
+  margin-bottom: 0;
+}
+
+.eduMatchPanelTitle {
+  margin: 0 0 16px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #004e98;
+}
+
+.eduMatchSliderBlock {
+  margin-bottom: 18px;
+}
+
+.eduMatchSliderBlock:last-child {
+  margin-bottom: 0;
+}
+
+.eduMatchSliderLabel {
+  display: block;
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #004e98;
+  opacity: 0.85;
+}
+
+.eduMatchRange {
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(0, 78, 152, 0.12);
+  appearance: none;
+  cursor: pointer;
+}
+
+.eduMatchRange::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #004e98;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 78, 152, 0.35);
+}
+
+.eduMatchRange::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #004e98;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 78, 152, 0.35);
+}
+
+.eduMatchCountNum {
+  margin: 0 0 6px;
+  font-size: clamp(40px, 6vw, 56px);
+  font-weight: 800;
+  line-height: 1;
+  color: #004e98;
+  text-align: center;
+}
+
+.eduMatchCountText {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  color: #004e98;
+  opacity: 0.85;
+}
+
+/* Result cards */
+.eduMatchResults {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.eduMatchCard {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px 20px;
+  padding: 20px 18px;
+  border: 1px solid rgba(0, 78, 152, 0.45);
+  border-radius: 20px;
+  background: #fff;
+  align-items: start;
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.eduMatchCard:hover {
+  box-shadow: 0 10px 28px rgba(0, 78, 152, 0.08);
+  transform: translateY(-2px);
+}
+
+.eduMatchCardMain {
+  min-width: 0;
+}
+
+.eduMatchCardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.eduMatchCardName {
+  margin: 0;
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #004e98;
+}
+
+.eduMatchStar {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: #e9a00a;
+}
+
+.eduMatchLoc {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #004e98;
+  opacity: 0.65;
+}
+
+.eduMatchLoc svg {
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.eduMatchTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.eduMatchTag {
+  padding: 5px 11px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #004e98;
+  background: rgba(0, 180, 216, 0.16);
+  border-radius: 999px;
+}
+
+.eduMatchStats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 28px;
+}
+
+.eduMatchStat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.eduMatchStatLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #004e98;
+  opacity: 0.55;
+}
+
+.eduMatchStatValue {
+  font-size: 16px;
+  font-weight: 800;
+  color: #004e98;
+}
+
+.eduMatchCardActions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 130px;
+}
+
+.eduMatchBtnSolid {
+  padding: 12px 16px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #004e98;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.eduMatchBtnSolid:hover {
+  opacity: 0.92;
+  transform: scale(1.02);
+}
+
+.eduMatchBtnOutline {
+  padding: 11px 16px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #004e98;
+  background: #fff;
+  border: 2px solid #004e98;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.eduMatchBtnOutline:hover {
+  background: rgba(0, 78, 152, 0.06);
+}
+
+.eduMatchEmpty {
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #004e98;
+  opacity: 0.65;
+  border: 1px dashed rgba(0, 78, 152, 0.35);
+  border-radius: 20px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eduMatchCard:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .eduMatchBtnSolid:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .eduMatchLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .eduMatchCard {
+    grid-template-columns: 1fr;
+  }
+
+  .eduMatchCardActions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .eduMatchBtnSolid,
+  .eduMatchBtnOutline {
+    flex: 1;
+    min-width: 120px;
+  }
+}

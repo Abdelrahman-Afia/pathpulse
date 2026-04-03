@@ -10,6 +10,7 @@ import PathfinderResults from "./Pages/PathfinderResults";
 import FocusPal from "./Pages/FocusPal";
 import Ideafit from "./Pages/Ideafit";
 import FutureRadar from "./Pages/FutureRadar";
+import EduMatch from "./Pages/EduMatch";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 
@@ -27,6 +28,7 @@ function App() {
             <Route path="/focuspal" element={<FocusPal />} />
             <Route path="/ideafit" element={<Ideafit />} />
             <Route path="/futureradar" element={<FutureRadar />} />
+            <Route path="/edumatch" element={<EduMatch />} />
           </Route>
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
