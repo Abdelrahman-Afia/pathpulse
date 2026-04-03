@@ -1,6 +1,10 @@
 import "./SectionTwo.css";
 import sectionBanner from "../Assets/Section2Pic.png";
-import sectionVideo from "../Assets/SectionTwoVideo.mp4";
+
+const publicBase = (process.env.PUBLIC_URL || "").replace(/\/$/, "");
+const sectionVideoUrl =
+  process.env.REACT_APP_SECTION_TWO_VIDEO_URL?.trim() ||
+  `${publicBase}/SectionTwoVideo.mp4`;
 
 export default function SectionTwo({ language }) {
   const isArabic = language === "ar";
@@ -39,7 +43,7 @@ export default function SectionTwo({ language }) {
 
         <a
           className="sectionTwoPlay"
-          href={sectionVideo}
+          href={sectionVideoUrl}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={playLabel}

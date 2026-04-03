@@ -1,7 +1,8 @@
 {
   "build": {
     "env": {
-      "NODE_OPTIONS": "--no-deprecation"
+      "NODE_OPTIONS": "--no-deprecation",
+      "DISABLE_ESLINT_PLUGIN": "true"
     }
   }
 }

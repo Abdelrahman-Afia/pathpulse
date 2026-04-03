@@ -22,5 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Over GitHub 100MB limit — keep file locally for dev/build
+# Large / optional video: use REACT_APP_SECTION_TWO_VIDEO_URL on Vercel, or place file in public/ locally
 src/Assets/SectionTwoVideo.mp4
+public/SectionTwoVideo.mp4
