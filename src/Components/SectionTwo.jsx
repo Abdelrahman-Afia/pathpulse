@@ -1,5 +1,6 @@
 import "./SectionTwo.css";
-import sectionImage from "../Assets/Section2Pic.png";
+import sectionBanner from "../Assets/Section2Pic.png";
+import sectionVideo from "../Assets/SectionTwoVideo.mp4";
 
 export default function SectionTwo({ language }) {
   const isArabic = language === "ar";
@@ -19,16 +20,30 @@ export default function SectionTwo({ language }) {
     : "Find a path with a pulse.";
 
   const cta = isArabic ? "استكشف الأدوات" : "Explore Tools";
+  const playLabel = isArabic
+    ? "تشغيل الفيديو في علامة تبويب جديدة"
+    : "Play video in new tab";
 
   return (
     <section className="sectionTwo" aria-label="Section two">
       <div className="sectionTwoCard">
         <div className="sectionTwoMedia" aria-hidden="true">
-          <img className="sectionTwoImage" src={sectionImage} alt="" />
+          <img
+            className="sectionTwoBanner"
+            src={sectionBanner}
+            alt=""
+            decoding="async"
+          />
           <div className="sectionTwoImageOverlay" />
         </div>
 
-        <div className="sectionTwoTopIcon" aria-hidden="true">
+        <a
+          className="sectionTwoPlay"
+          href={sectionVideo}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={playLabel}
+        >
           <svg viewBox="0 0 120 120" focusable="false" aria-hidden="true">
             <rect
               fill="rgba(0, 78, 152, 0.4)"
@@ -38,7 +53,7 @@ export default function SectionTwo({ language }) {
             />
             <path d="M50 39V81L84 60L50 39Z" fill="#ffffff" />
           </svg>
-        </div>
+        </a>
 
         <div className="sectionTwoBottomRow">
           <div className="sectionTwoContent">

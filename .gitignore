@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Over GitHub 100MB limit — keep file locally for dev/build
+src/Assets/SectionTwoVideo.mp4
