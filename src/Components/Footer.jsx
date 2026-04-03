@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
+import termsDocumentIcon from "../Assets/Terms Of Service Icon.png";
 
 function SocialIcon({ name }) {
   const common = { className: "footerSocialSvg", viewBox: "0 0 24 24", "aria-hidden": true };
@@ -178,9 +179,16 @@ export default function Footer({ language, logoSrc }) {
             <a className="footerLegalLink" href="/">
               {isArabic ? "سياسة الخصوصية" : "Privacy Policy"}
             </a>
-            <a className="footerLegalLink" href="/">
+            <Link className="footerLegalLink footerLegalLinkTerms" to="/terms-of-service">
+              <img
+                className="footerLegalIcon"
+                src={termsDocumentIcon}
+                alt=""
+                width={18}
+                height={18}
+              />
               {isArabic ? "شروط الخدمة" : "Terms of Service"}
-            </a>
+            </Link>
             <a className="footerLegalLink" href="/">
               {isArabic ? "إعدادات ملفات تعريف الارتباط" : "Cookies Settings"}
             </a>

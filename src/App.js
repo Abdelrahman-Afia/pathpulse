@@ -11,6 +11,8 @@ import FocusPal from "./Pages/FocusPal";
 import Ideafit from "./Pages/Ideafit";
 import FutureRadar from "./Pages/FutureRadar";
 import EduMatch from "./Pages/EduMatch";
+import NotFound from "./Pages/NotFound";
+import TermsOfService from "./Pages/TermsOfService";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 
@@ -29,6 +31,8 @@ function App() {
             <Route path="/ideafit" element={<Ideafit />} />
             <Route path="/futureradar" element={<FutureRadar />} />
             <Route path="/edumatch" element={<EduMatch />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
