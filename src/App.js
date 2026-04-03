@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import Preloader from "./Components/Preloader";
 import { AuthProvider } from "./context/AuthContext";
 import ScrollToTop from "./Components/ScrollToTop";
 import MainLayout from "./Components/MainLayout";
@@ -23,32 +24,35 @@ import SignUp from "./Pages/SignUp";
 
 function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <AuthProvider>
-        <Routes>
-          <Route element={<MainLayout />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/pathfinder" element={<Pathfinder />} />
-            <Route path="/pathfinder/questions" element={<PathfinderQuestions />} />
-            <Route path="/pathfinder/results" element={<PathfinderResults />} />
-            <Route path="/focuspal" element={<FocusPal />} />
-            <Route path="/ideafit" element={<Ideafit />} />
-            <Route path="/futureradar" element={<FutureRadar />} />
-            <Route path="/edumatch" element={<EduMatch />} />
-            <Route path="/terms-of-service" element={<TermsOfService />} />
-            <Route path="/about" element={<AboutUs />} />
-            <Route path="/careers" element={<Careers />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/cookie-settings" element={<CookieSettings />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
-          <Route path="/sign-in" element={<SignIn />} />
-          <Route path="/sign-up" element={<SignUp />} />
-        </Routes>
-      </AuthProvider>
-    </BrowserRouter>
+    <>
+      <Preloader />
+      <BrowserRouter>
+        <ScrollToTop />
+        <AuthProvider>
+          <Routes>
+            <Route element={<MainLayout />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/pathfinder" element={<Pathfinder />} />
+              <Route path="/pathfinder/questions" element={<PathfinderQuestions />} />
+              <Route path="/pathfinder/results" element={<PathfinderResults />} />
+              <Route path="/focuspal" element={<FocusPal />} />
+              <Route path="/ideafit" element={<Ideafit />} />
+              <Route path="/futureradar" element={<FutureRadar />} />
+              <Route path="/edumatch" element={<EduMatch />} />
+              <Route path="/terms-of-service" element={<TermsOfService />} />
+              <Route path="/about" element={<AboutUs />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/cookie-settings" element={<CookieSettings />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="*" element={<NotFound />} />
+            </Route>
+            <Route path="/sign-in" element={<SignIn />} />
+            <Route path="/sign-up" element={<SignUp />} />
+          </Routes>
+        </AuthProvider>
+      </BrowserRouter>
+    </>
   );
 }
 
