@@ -1,0 +1,271 @@
+.footer {
+  background: #ffffff;
+  color: #004e98;
+  padding: 56px 22px 32px;
+  font-family:
+    "Cairo",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+}
+
+.footerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footerTop {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr 1fr;
+  gap: 40px 36px;
+  align-items: start;
+}
+
+.footerColBrand {
+  min-width: 0;
+}
+
+.footerLogoLink {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+.footerLogo {
+  display: block;
+  height: auto;
+  width: clamp(140px, 28vw, 180px);
+}
+
+.footerTagline {
+  margin: 0 0 18px;
+  font-size: clamp(14px, 1.35vw, 16px);
+  font-weight: 600;
+  line-height: 1.55;
+  max-width: 320px;
+}
+
+.footerNewsletter {
+  margin: 0 0 12px;
+}
+
+.footerNewsletterRow {
+  --pp-blue: #004e98;
+  --pp-blue-soft: rgba(0, 78, 152, 0.32);
+  --pp-blue-hover: #003f7a;
+  --pp-ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 10px;
+  max-width: 420px;
+}
+
+/* Match Section Eight contact inputs: soft stroke → solid blue on focus; same 2px + pill shape as Subscribe */
+.footerEmailInput,
+.footerSubscribeBtn {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+  line-height: 1.25;
+  color: var(--pp-blue);
+  background-color: #ffffff;
+  border: 2px solid var(--pp-blue-soft);
+  border-radius: 999px;
+  transition:
+    border-color 0.22s var(--pp-ease),
+    background-color 0.22s var(--pp-ease),
+    color 0.22s var(--pp-ease);
+}
+
+.footerEmailInput {
+  flex: 1;
+  min-width: 160px;
+  min-height: 48px;
+  padding: 0.85em 1.15em;
+  outline: none;
+}
+
+.footerEmailInput::placeholder {
+  color: rgba(0, 78, 152, 0.55);
+}
+
+.footerEmailInput:focus {
+  border-color: var(--pp-blue);
+}
+
+.footerEmailInput:focus-visible {
+  outline: none;
+}
+
+.footerSubscribeBtn {
+  min-width: 124px;
+  min-height: 48px;
+  padding: 0.85em 1.35em;
+  flex-shrink: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.footerSubscribeBtn:hover {
+  background-color: var(--pp-blue);
+  color: #ffffff;
+  border-color: var(--pp-blue);
+}
+
+.footerSubscribeBtn:focus-visible {
+  outline: none;
+  border-color: var(--pp-blue);
+}
+
+.footerSubscribeBtn:active {
+  background-color: var(--pp-blue-hover);
+  border-color: var(--pp-blue-hover);
+  color: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footerEmailInput,
+  .footerSubscribeBtn {
+    transition: none;
+  }
+}
+
+.footerDisclaimer {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: rgba(0, 78, 152, 0.85);
+  max-width: 360px;
+}
+
+.footerHeading {
+  margin: 0 0 14px;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.footerList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footerLink {
+  color: #004e98;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.footerLink:hover {
+  opacity: 0.78;
+}
+
+.footerListSocial {
+  gap: 12px;
+}
+
+.footerLinkSocial {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footerSocialSvg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: #004e98;
+}
+
+.footerRule {
+  height: 1px;
+  background: #004e98;
+  margin: 40px 0 22px;
+}
+
+.footerBottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 24px;
+}
+
+.footerCopyright {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.footerLegal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 22px;
+  align-items: center;
+}
+
+.footerLegalLink {
+  color: #004e98;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footerLegalLink:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 960px) {
+  .footerTop {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footerColBrand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer {
+    padding: 40px 16px 28px;
+  }
+
+  .footerTop {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footerNewsletterRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footerSubscribeBtn {
+    width: 100%;
+    max-width: 280px;
+  }
+}

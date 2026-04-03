@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-function LanguageMenu({ language, onLanguageChange }) {
+export function LanguageMenu({ language, onLanguageChange }) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef(null);
 
@@ -104,9 +105,9 @@ export default function Navbar({ language, onLanguageChange, logoSrc }) {
   return (
     <header className="navbar" role="navigation" aria-label="Top navigation">
       <div className={`navbarInner ${isArabic ? 'fontArabic' : 'fontEnglish'}`}>
-        <a className="navbarLogo" href="/" aria-label="PathPulse home">
+        <Link className="navbarLogo" to="/" aria-label="PathPulse home">
           <img className="navbarLogoImg" src={logoSrc} alt="PathPulse" />
-        </a>
+        </Link>
 
         <nav className="navbarLinks" aria-label="Primary navigation">
           {links.map((item) => (
@@ -130,9 +131,9 @@ export default function Navbar({ language, onLanguageChange, logoSrc }) {
             }}
           />
 
-          <a className="navbarSignIn" href="/">
+          <Link className="navbarSignIn" to="/sign-in">
             {isArabic ? 'تسجيل الدخول' : 'Sign in'}
-          </a>
+          </Link>
 
           <a className="navbarStartFree" href="/">
             <span className="navbarStartFreeText">
@@ -190,13 +191,13 @@ export default function Navbar({ language, onLanguageChange, logoSrc }) {
             />
           </div>
 
-          <a
+          <Link
             className="navbarMobileSignIn"
-            href="/"
+            to="/sign-in"
             onClick={() => setMobileMenuOpen(false)}
           >
             {isArabic ? 'تسجيل الدخول' : 'Sign in'}
-          </a>
+          </Link>
           <a
             className="navbarMobileStartFree"
             href="/"
