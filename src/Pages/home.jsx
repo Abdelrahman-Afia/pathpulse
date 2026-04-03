@@ -9,6 +9,7 @@ import SectionFour from "../Components/SectionFour";
 import SectionFive from "../Components/SectionFive";
 import SectionSix from "../Components/SectionSix";
 import SectionSeven from "../Components/SectionSeven";
+import SectionEight from "../Components/SectionEight";
 
 export default function Home() {
   const [language, setLanguage] = useState("en");
@@ -29,6 +30,7 @@ export default function Home() {
         <SectionFive language={language} />
         <SectionSix language={language} />
         <SectionSeven language={language} />
+        <SectionEight language={language} />
       </main>
     </div>
   );
