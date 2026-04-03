@@ -1,0 +1,374 @@
+.careersPage {
+  background: #ffffff;
+  padding: 28px 22px 80px;
+  font-family:
+    "Cairo",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+  color: #004e98;
+}
+
+.careersInner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.careersBack {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 20px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #004e98;
+  text-decoration: none;
+}
+
+.careersBack:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.careersHero {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.careersHeroTitle {
+  margin: 0 auto 18px;
+  max-width: 900px;
+  font-size: clamp(24px, 4vw, 38px);
+  font-weight: 800;
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #004e98;
+}
+
+.careersHeroLead {
+  margin: 0 auto;
+  max-width: 720px;
+  font-size: clamp(16px, 1.5vw, 18px);
+  font-weight: 600;
+  line-height: 1.65;
+  color: #004e98;
+  opacity: 0.92;
+}
+
+.careersSectionTitle {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #004e98;
+}
+
+.careersSectionSub {
+  margin: 0 0 26px;
+  font-size: clamp(16px, 1.4vw, 17px);
+  font-weight: 600;
+  text-align: center;
+  color: #004e98;
+  opacity: 0.88;
+}
+
+.careersValuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 56px;
+}
+
+.careersMotionCard {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  min-height: 0;
+  padding: 20px 18px;
+  background: #ffffff;
+  border: 1px solid #004e98;
+  border-radius: 8px;
+  cursor: default;
+  transition: all 0.5s;
+  user-select: none;
+  text-align: start;
+}
+
+.careersMotionCard:hover {
+  transform: scale(1.05);
+}
+
+.careersMotionCard:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.careersCardTitle {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #004e98;
+}
+
+.careersCardBody {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #004e98;
+  opacity: 0.9;
+}
+
+.careersJobsList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 56px;
+}
+
+.homeRoot[dir="rtl"] .careersJobCard {
+  flex-direction: row-reverse;
+}
+
+.careersJobCard {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(14px, 2.5vw, 22px);
+  padding: 18px 20px;
+  background: #fff;
+  border: 1px solid #004e98;
+  border-radius: 8px;
+  transition: all 0.5s;
+  user-select: none;
+}
+
+.careersJobCard:hover {
+  transform: scale(1.02);
+}
+
+.careersJobCard:active {
+  transform: scale(0.98) rotateZ(1.2deg);
+}
+
+.careersJobIconWrap {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.careersJobIcon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.careersJobMain {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.careersJobTitle {
+  margin: 0;
+  font-size: clamp(17px, 1.5vw, 20px);
+  font-weight: 800;
+  color: #004e98;
+}
+
+.careersJobMeta {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #004e98;
+  opacity: 0.75;
+}
+
+.careersJobDesc {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #004e98;
+  opacity: 0.88;
+}
+
+.careersJobTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.careersTag {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #004e98;
+  background: rgba(0, 78, 152, 0.08);
+  border-radius: 6px;
+}
+
+.careersApplyBtn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background: #004e98;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.careersApplyBtn:hover {
+  opacity: 0.92;
+  transform: scale(1.03);
+}
+
+.careersBenefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 56px;
+}
+
+.careersBenefitCard {
+  min-height: 72px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.careersBenefitCard .careersCardBody {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.careersCta {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 36px 28px;
+  border: 1px solid rgba(0, 78, 152, 0.25);
+  border-radius: 12px;
+  background: rgba(0, 180, 216, 0.06);
+}
+
+.careersCtaTitle {
+  margin: 0 0 14px;
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #004e98;
+}
+
+.careersCtaLead {
+  margin: 0 0 24px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.55;
+  color: #004e98;
+  opacity: 0.9;
+}
+
+.careersCtaBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 32px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background: #004e98;
+  border-radius: 999px;
+  border: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.careersCtaBtn:hover {
+  opacity: 0.93;
+  transform: scale(1.02);
+}
+
+.careersCtaArrow {
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .careersMotionCard,
+  .careersJobCard,
+  .careersApplyBtn,
+  .careersCtaBtn {
+    transition: none;
+  }
+
+  .careersMotionCard:hover,
+  .careersMotionCard:active,
+  .careersJobCard:hover,
+  .careersJobCard:active,
+  .careersApplyBtn:hover,
+  .careersCtaBtn:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 960px) {
+  .careersValuesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .careersBenefitsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .careersJobCard {
+    flex-wrap: wrap;
+  }
+
+  .careersApplyBtn {
+    width: 100%;
+    margin-top: 4px;
+  }
+}
+
+@media (max-width: 560px) {
+  .careersValuesGrid,
+  .careersBenefitsGrid {
+    grid-template-columns: 1fr;
+  }
+}

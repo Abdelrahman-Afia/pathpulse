@@ -66,7 +66,7 @@ const discoverKeys = [
 
 const buildLinks = [
   { key: "about", en: "About us", ar: "من نحن", path: "/about" },
-  { key: "careers", en: "Careers", ar: "الوظائف", href: "/" },
+  { key: "careers", en: "Careers", ar: "الوظائف", path: "/careers" },
   { key: "blog", en: "Blog", ar: "المدونة", href: "/" },
 ];
 
