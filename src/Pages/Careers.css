@@ -1,6 +1,9 @@
 .careersPage {
   background: #ffffff;
-  padding: 28px 22px 80px;
+  padding-top: 24px;
+  padding-bottom: 72px;
+  padding-left: max(clamp(14px, 4.5vw, 22px), env(safe-area-inset-left, 0px));
+  padding-right: max(clamp(14px, 4.5vw, 22px), env(safe-area-inset-right, 0px));
   font-family:
     "Cairo",
     system-ui,
@@ -15,6 +18,8 @@
 .careersInner {
   max-width: 1100px;
   margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .careersBack {
@@ -36,7 +41,8 @@
 
 .careersHero {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
+  padding-inline: 2px;
 }
 
 .careersHeroTitle {
@@ -72,6 +78,7 @@
 
 .careersSectionSub {
   margin: 0 0 26px;
+  padding-inline: 4px;
   font-size: clamp(16px, 1.4vw, 17px);
   font-weight: 600;
   text-align: center;
@@ -133,22 +140,27 @@
   flex-direction: column;
   gap: 14px;
   margin-bottom: 56px;
+  width: 100%;
 }
 
-.homeRoot[dir="rtl"] .careersJobCard {
-  flex-direction: row-reverse;
+.careersJobsList > * {
+  width: 100%;
+  min-width: 0;
 }
 
+/* Mobile-first: icon + text row, full-width Apply below */
 .careersJobCard {
   box-sizing: border-box;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: clamp(14px, 2.5vw, 22px);
-  padding: 18px 20px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
+  width: 100%;
+  max-width: 100%;
+  padding: 16px clamp(14px, 4vw, 18px);
   background: #fff;
   border: 1px solid #004e98;
-  border-radius: 8px;
+  border-radius: 10px;
   transition: all 0.5s;
   user-select: none;
 }
@@ -161,10 +173,19 @@
   transform: scale(0.98) rotateZ(1.2deg);
 }
 
+.careersJobTop {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+  width: 100%;
+}
+
 .careersJobIconWrap {
   flex-shrink: 0;
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -187,9 +208,11 @@
 
 .careersJobTitle {
   margin: 0;
-  font-size: clamp(17px, 1.5vw, 20px);
+  font-size: clamp(16px, 3.8vw, 20px);
   font-weight: 800;
+  line-height: 1.25;
   color: #004e98;
+  overflow-wrap: anywhere;
 }
 
 .careersJobMeta {
@@ -202,42 +225,46 @@
 
 .careersJobDesc {
   margin: 0;
-  font-size: 14px;
+  font-size: clamp(13px, 3.2vw, 14px);
   font-weight: 600;
-  line-height: 1.45;
+  line-height: 1.5;
   color: #004e98;
   opacity: 0.88;
+  overflow-wrap: anywhere;
 }
 
 .careersJobTags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 2px;
+  gap: 6px 8px;
+  margin-top: 4px;
 }
 
 .careersTag {
   display: inline-block;
-  padding: 4px 10px;
-  font-size: 11px;
+  padding: 5px 10px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #004e98;
   background: rgba(0, 78, 152, 0.08);
   border-radius: 6px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .careersApplyBtn {
-  flex-shrink: 0;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 18px;
   font-family: inherit;
   font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
@@ -276,10 +303,11 @@
   text-align: center;
   max-width: 640px;
   margin: 0 auto;
-  padding: 36px 28px;
+  padding: clamp(24px, 5vw, 36px) clamp(16px, 4vw, 28px);
   border: 1px solid rgba(0, 78, 152, 0.25);
   border-radius: 12px;
   background: rgba(0, 180, 216, 0.06);
+  box-sizing: border-box;
 }
 
 .careersCtaTitle {
@@ -347,7 +375,33 @@
   }
 }
 
-@media (max-width: 960px) {
+@media (min-width: 901px) {
+  .careersJobCard {
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(16px, 2vw, 22px);
+    padding: 18px 20px;
+  }
+
+  .careersJobTop {
+    flex: 1;
+    min-width: 0;
+    align-items: center;
+  }
+
+  .careersJobIconWrap {
+    width: 52px;
+    height: 52px;
+  }
+
+  .careersApplyBtn {
+    width: auto;
+    flex-shrink: 0;
+    padding: 12px 22px;
+  }
+}
+
+@media (max-width: 900px) {
   .careersValuesGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -356,13 +410,12 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .careersJobCard {
-    flex-wrap: wrap;
+  .careersMotionCard:hover {
+    transform: scale(1.025);
   }
 
-  .careersApplyBtn {
-    width: 100%;
-    margin-top: 4px;
+  .careersJobCard:hover {
+    transform: scale(1.01);
   }
 }
 
@@ -370,5 +423,9 @@
   .careersValuesGrid,
   .careersBenefitsGrid {
     grid-template-columns: 1fr;
+  }
+
+  .careersMotionCard {
+    padding: 18px 16px;
   }
 }

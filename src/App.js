@@ -15,6 +15,7 @@ import NotFound from "./Pages/NotFound";
 import TermsOfService from "./Pages/TermsOfService";
 import AboutUs from "./Pages/AboutUs";
 import Careers from "./Pages/Careers";
+import Blog from "./Pages/Blog";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 
@@ -36,6 +37,7 @@ function App() {
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/careers" element={<Careers />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="*" element={<NotFound />} />
           </Route>
           <Route path="/sign-in" element={<SignIn />} />

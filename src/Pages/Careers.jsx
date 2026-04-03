@@ -194,19 +194,21 @@ export default function Careers() {
               return (
                 <MotionSection key={job.key} preset="up" amount={0.08} rtl={isRtl} delay={index * 0.04}>
                   <article className="careersJobCard">
-                    <div className="careersJobIconWrap">
-                      <img className="careersJobIcon" src={jobIcon} alt="" width={52} height={52} />
-                    </div>
-                    <div className="careersJobMain">
-                      <h3 className="careersJobTitle">{title}</h3>
-                      <p className="careersJobMeta">{isArabic ? job.metaAr : job.metaEn}</p>
-                      <p className="careersJobDesc">{isArabic ? job.descAr : job.descEn}</p>
-                      <div className="careersJobTags">
-                        {tagList.map((tag) => (
-                          <span key={tag} className="careersTag">
-                            {tag}
-                          </span>
-                        ))}
+                    <div className="careersJobTop">
+                      <div className="careersJobIconWrap">
+                        <img className="careersJobIcon" src={jobIcon} alt="" width={48} height={48} />
+                      </div>
+                      <div className="careersJobMain">
+                        <h3 className="careersJobTitle">{title}</h3>
+                        <p className="careersJobMeta">{isArabic ? job.metaAr : job.metaEn}</p>
+                        <p className="careersJobDesc">{isArabic ? job.descAr : job.descEn}</p>
+                        <div className="careersJobTags">
+                          {tagList.map((tag) => (
+                            <span key={tag} className="careersTag">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     </div>
                     <a className="careersApplyBtn" href={jobApplyHref(title)}>

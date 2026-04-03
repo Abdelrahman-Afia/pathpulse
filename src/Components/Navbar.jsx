@@ -93,6 +93,7 @@ export default function Navbar({ language, onLanguageChange, logoSrc }) {
       { key: 'ideafit', en: 'Ideafit', ar: 'ايديا فيت', path: '/ideafit' },
       { key: 'futureradar', en: 'FutureRadar', ar: 'فيوتشر رادار', path: '/futureradar' },
       { key: 'edumatch', en: 'EduMatch', ar: 'اديو ماتش', path: '/edumatch' },
+      { key: 'blog', en: 'Blog', ar: 'المدونة', path: '/blog' },
     ],
     []
   );
